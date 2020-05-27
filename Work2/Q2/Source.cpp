@@ -1,4 +1,7 @@
-/*Nadezda Tsygankova*/
+/*Author: Nadezda Tsygankova
+  Description: Workshop02/Q2
+  Due date:27/05/2020
+*/
 
 /*Write a program that prints the numbers 1 to 4 on the same line with each pair 
 of adjacent numbers separated by one space. Do this several ways:
@@ -8,24 +11,23 @@ c) Using four statements.*/
 
 #include <iostream>
 
-using namespace std;
 
 int main() {
 
  
 
    //one statement with one stream insertion operator
-   cout << "1 2 3 4\n";
+   std::cout << "1 2 3 4\n";
 
    //one statement with four stream insertion operators
 
-   cout << "1 " << "2 " <<  "3 " <<  "4 " << endl;
+   std::cout << "1 " << "2 " <<  "3 " <<  "4 \n" ;
 
    //four statements
-   cout << "1 ";
-   cout << "2 ";
-   cout << "3 ";
-   cout << "4 \n";
+   std::cout << "1 ";
+   std::cout << "2 ";
+   std::cout << "3 ";
+   std::cout << "4 \n";
   
 
    return 0;
