@@ -1,2 +1,2 @@
-E:\Наденька\SENECA\C++ OOP\Workshops\Workshop2\Q4\Debug\Q4.exe
-E:\Наденька\SENECA\C++ OOP\Workshops\Workshop2\Q4\Debug\Q4.pdb
+E:\Наденька\SENECA\C++ OOP\Workshops\CWorkshops\Work2\Q4\Debug\Q4.exe
+E:\Наденька\SENECA\C++ OOP\Workshops\CWorkshops\Work2\Q4\Debug\Q4.pdb
