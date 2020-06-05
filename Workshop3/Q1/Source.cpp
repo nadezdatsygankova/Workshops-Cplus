@@ -1,5 +1,5 @@
 /*Author: Nadezda Tsygankova
-  Description: Workshop03/Q1
+  Description: Workshop02/Q2
   Due date:06/04/2020
 */
 
