@@ -1,3 +1,9 @@
+/*Author: Nadezda Tsygankova
+  Description: Workshop03/Q3
+  Due date:06/05/2020
+*/
+
+
 #pragma once
 #include <iostream>
 

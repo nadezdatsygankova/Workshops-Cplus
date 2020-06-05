@@ -1,3 +1,17 @@
+/*Author: Nadezda Tsygankova
+  Description: Workshop03/Q3
+  Due date:06/05/2020
+*/
+
+/*
+
+Create a class called Employee that includes three pieces of information as data members—
+a first name (type string),
+a last name (type string) and a monthly salary (type int).
+
+*/
+
+
 #include<iostream>
 #include<string>
 #include "Employee.h"
@@ -56,17 +70,22 @@ int main()
    std::cout << "Enter all information about second employee: " << std::endl;
    std::cout << "--------------------------->" << std::endl;
 
-   std::cout << "Enter name the second employee > " << std::endl;
-   getline(std::cin, nameTwo);
-   secondEmployee.setName(nameTwo);
+   std::cout << "Enter name the second employee > ";
+   //std::cin >> name;
+   std::cin.ignore();
+   getline(std::cin, name);
+   secondEmployee.setName(name);
 
    std::cout << "Enter last name the second employee > ";
-   getline(std::cin, lasnameTwo);
-   secondEmployee.setLastName(lasnameTwo);
+   //std::cin >> lasname;
+   std::cin.ignore();
+   getline(std::cin, lasname);
+   secondEmployee.setLastName(lasname);
 
    std::cout << "Enter salary for  the second employee > ";
    std::cin >> salarySecond;
    secondEmployee.setSalary(salarySecond);
+   std::cout << "---------------------------" << std::endl;
 
    
    
@@ -80,7 +99,7 @@ int main()
       case 1:
          std::cout << "\nInformation about first employee: " << std::endl;
          std::cout << "\n---------------------------" << std::endl;
-         std::cout <<"Name is"<< firstEmployee.getName() << std::endl;
+         std::cout <<"Name is "<< firstEmployee.getName() << std::endl;
          std::cout <<"Lastname is "<< firstEmployee.getLstName() << std::endl;
          std::cout <<"Salary is "<< firstEmployee.getSalary() << std::endl;
          break;
