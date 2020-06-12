@@ -37,7 +37,7 @@ int main()
       std::cout << "Enter the hours for the third car: ";
       std::cin >> timeT;
 
-      float charge = calculateCharges(timeF) + calculateCharges(timeS) + calculateCharges(timeT); //calculate total charge
+      double charge = calculateCharges(timeF) + calculateCharges(timeS) + calculateCharges(timeT); //calculate total charge
       std::cout << "Car " << std::setw(11)<<"Hours "<<std::setw(10) << "Charge " << std::endl;
 
       //set precision for time and charges
