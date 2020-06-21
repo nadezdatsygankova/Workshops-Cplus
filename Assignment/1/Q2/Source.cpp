@@ -1,6 +1,6 @@
-/*Author:  Diego Pena Sosa, Nadezda Tsygankova,
+/*Author:  Nadezda Tsygankova (ID 152949194),Diego Pena Sosa,
   Description: Assignment1 /Q2
-  Due date:06/19/2020
+  Due date:06/23/2020
 */
 /*
 Checked for this test:

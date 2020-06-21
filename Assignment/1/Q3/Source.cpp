@@ -1,6 +1,6 @@
-/* Author:  Nadezda Tsygankova,Diego Pena Sosa, 
+/* Author:  Nadezda Tsygankova (ID 152949194),Diego Pena Sosa, 
 Description : Assignment1 / Q3
-Due date : 06 / 19 / 2020
+Due date : 06 / 23 / 2020
 * /
 
 
@@ -14,7 +14,7 @@ Checked for this test:
 5. bDay :   33;           -2;  current day +1
 6  bMonth : 16;           -4;  current month 
 7. bYear:  -10;current year+1; current day 
-8. gender: male, female, underfined; 
+8. gender: male, female, undefined; 
 9. Height: -2;4
 10. Weight: -2;
 
@@ -113,14 +113,14 @@ int main() {
 		
 			//gender
 			do {
-			    std::cout << "What is your gender (Male, Female, Underfined) :\n";
+			    std::cout << "What is your gender (Male, Female, Undefined) :\n";
 			     getline(std::cin, gender);
 			  //check gender
-				if ((gender != "Male") && (gender != "Female") && (gender != "Underfined"))
+				if ((gender != "Male") && (gender != "Female") && (gender != "Undefined"))
 				{
 					std::cout << "Invalid input\n";
 				}
-			} while (gender != "Male" && gender != "Female" && gender != "Underfined");
+			} while (gender != "Male" && gender != "Female" && gender != "Undefined");
 
 			health.setGender(gender);
 
