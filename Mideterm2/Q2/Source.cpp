@@ -21,8 +21,8 @@ int main()
    
    Pizza New;
    int option, option1;
-   char type[30];
-   char size[30];
+   std::string type;
+   std::string size;
    int numTop=0;
 
    void menu();
@@ -34,14 +34,14 @@ int main()
       switch (option) {
       case 1:
 
-         strcpy_s(type, 30, "Deep dish");
+         type = "Deep dish";
 
          break;
       case 2:
-         strcpy_s(type, 30, "Hand tossed");
+         type="Hand tossed";
          break;
       case 3:
-         strcpy_s(type, 30, "Pan");
+         type ="Pan";
          break;
 
 
@@ -59,14 +59,14 @@ int main()
          switch (option1) {
          case 1:
 
-            strcpy_s(size,30, "Small");
+            size= "Small";
 
             break;
          case 2:
-            strcpy_s(size,30, "Medium");
+            size= "Medium";
             break;
          case 3:
-            strcpy_s(size,30, "Large");
+            size="Large";
          default:
             std::cout << "Invalid Choice" << std::endl;
          }

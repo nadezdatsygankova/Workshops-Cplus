@@ -10,6 +10,18 @@ Fraction::Fraction():number1(0),number2(0)
 {
 
 };
+
+Fraction::Fraction(int number1, int number2)
+{
+   if (number1 < 0)
+   {
+      number1 = 0;
+   }
+   if (number2 < 0)
+   {
+      number2 = 0;
+   }
+}
 Fraction::~Fraction()
 {
 

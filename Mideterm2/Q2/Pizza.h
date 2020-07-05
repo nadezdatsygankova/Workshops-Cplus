@@ -3,7 +3,7 @@
   Due date:07/05/2020
 */
 #pragma once
-#include <string>
+
 #include <string>
 
 class Pizza
@@ -11,26 +11,27 @@ class Pizza
 public:
 
    Pizza();
+   Pizza(std::string typePizza, std::string sizePizza, int number);
    ~Pizza();
-   void type(char type);
-   char getPizza();
-   void size(char size);
-   char setSize();
+   void type(std::string type);
+   std::string getPizza();
+   void size(std::string size);
+   std::string setSize();
    void numberTop(int number1);
    int setNumber();
-   void outputDescription(char type[30], char size[30],  int number);
-   double computePrice(char type[30], char size[30],  int number);
+   void outputDescription(std::string type, std::string size, int number);
+   double computePrice(std::string type, std::string size,  int number);
 
 
 private:
-   char typePizza[30];
-   char sizePizza[30];
-   char deepDish[30] = "Deep dish";
-   char hand[30]= "Hand-tossed";
-   char pan[30] ="Pan cooked" ;
-   char small[30] = "Small";
-   char medium[30] = "Medium";
-   char large[30] = "Large";
+   std::string typePizza;
+   std::string sizePizza;
+   std::string deepDish = "Deep dish";
+   std::string hand= "Hand-tossed";
+   std::string pan ="Pan cooked" ;
+   std::string small = "Small";
+   std::string medium = "Medium";
+   std::string large = "Large";
    int number;
 
 

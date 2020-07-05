@@ -1,9 +1,22 @@
 #include"Time Machine.h"
 
-TimeMachine::TimeMachine():startTime(0000), endTime(0000)
+TimeMachine::TimeMachine():startTime(0), endTime(0), startHours(0), startMinutes(0), endHours(0), endMinutes(0)
 {
 
 }
+TimeMachine::TimeMachine(int startTime, int endTime)
+{
+   if (startTime < 0)
+   {
+      startTime = 0;
+   }
+   if (endTime < 0)
+   {
+      endTime = 0;
+   }
+}
+
+
 TimeMachine::~TimeMachine()
 {
 

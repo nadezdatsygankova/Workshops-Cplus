@@ -13,6 +13,15 @@ Pizza::Pizza():typePizza(""), sizePizza(""), number(0)
 {
 
 }
+
+Pizza::Pizza(std::string typePizza, std::string sizePizza, int number):typePizza(""),sizePizza("")
+{
+   if (number < 0)
+   {
+      number = 0;
+   }
+}
+
 Pizza::~Pizza()
 {
 
@@ -20,27 +29,27 @@ Pizza::~Pizza()
 
 
 
-void Pizza::type(char type )
+void Pizza::type(std::string type )
 {
-   typePizza[30] = type;
+   typePizza = type;
 }
 
-char Pizza::getPizza()
+std::string Pizza::getPizza()
 {
-   return typePizza[30];
+   return typePizza;
 }
 
 
 
 
-void Pizza::size(char size)
+void Pizza::size(std::string size)
 {
-   sizePizza[30] = size;
+   sizePizza = size;
 }
 
-char Pizza::setSize()
+std::string Pizza::setSize()
 {
-   return sizePizza[30];
+   return sizePizza;
 }
 
 void Pizza::numberTop(int number1)
@@ -55,25 +64,34 @@ int Pizza::setNumber()
 
 //that outputs a textual description of the pizza 
 
-void Pizza::outputDescription(char type[30], char size[30], int number)
+void Pizza::outputDescription(std::string type, std::string size, int number)
 {
    std::cout << "Type of the pizza is ";
 
    
-      if (!strcmp(type, deepDish))
+      if (type == deepDish)
          std::cout << deepDish << std::endl;
-      else if (!strcmp(type, hand))
+      else if (type == hand)
          std::cout << hand << std::endl;
-      else if (!strcmp(type, pan))
+      else if (type== pan)
          std::cout << pan << std::endl;
 
    std::cout << "Size of the pizza is ";
-      if (!strcmp(size, small))
-         std::cout << small << std::endl;
-      else if (!strcmp(size, medium))
-         std::cout << medium << std::endl;
-      else if (!strcmp(size, large))
-         std::cout << large << std::endl;
+   if (size == small)
+   {
+      std::cout << small << std::endl;
+      }
+         
+   else if (size == medium)
+   {
+      std::cout << medium << std::endl;
+   }
+         
+   else if (size == large)
+   {
+      std::cout << large << std::endl;
+   }
+         
 
       
          std::cout << number << " topping" << std::endl;
@@ -82,7 +100,7 @@ void Pizza::outputDescription(char type[30], char size[30], int number)
 }
 
 //that computes the cost of the pizza and returns it 
-double Pizza::computePrice(char type[30], char size[30],  int number)
+double Pizza::computePrice(std::string type, std::string size,  int number)
 {
    double priceSmall = 10;
    double priceMedium = 14;
@@ -92,7 +110,7 @@ double Pizza::computePrice(char type[30], char size[30],  int number)
    for (int i = 0; i < 30; i++)
    {
 
-      if (!strcmp(size, small))
+      if (size == small)
       {
          result = priceSmall;
          if (number > 0)
@@ -101,7 +119,7 @@ double Pizza::computePrice(char type[30], char size[30],  int number)
          }
       }
      
-      else if (!strcmp(size, medium))
+      else if (size== medium)
       {
          result = priceMedium;
          if (number > 0)
@@ -110,7 +128,7 @@ double Pizza::computePrice(char type[30], char size[30],  int number)
          }
       }
 
-      else if (!strcmp(size, large))
+      else if (size ==large)
       {
          result = priceLarge;
          if (number > 0)

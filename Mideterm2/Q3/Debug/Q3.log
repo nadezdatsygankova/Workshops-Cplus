@@ -1,6 +1,6 @@
 ﻿  Fraction.cpp
   Source.cpp
-E:\Наденька\SENECA\C++ OOP\MIDTERM\Mideterm2\Q3\Source.cpp(28,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-E:\Наденька\SENECA\C++ OOP\MIDTERM\Mideterm2\Q3\Source.cpp(29,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\Наденька\SENECA\C++ OOP\MIDTERM\Mideterm2\Q3\Source.cpp(41,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\Наденька\SENECA\C++ OOP\MIDTERM\Mideterm2\Q3\Source.cpp(42,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Generating Code...
   Q3.vcxproj -> E:\Наденька\SENECA\C++ OOP\MIDTERM\Mideterm2\Q3\Debug\Q3.exe

@@ -3,6 +3,7 @@ class TimeMachine
 {
 public:
    TimeMachine();
+   TimeMachine(int startTime, int endTime);
    ~TimeMachine();
    void getStartTime(int number1);
    int setStartTime();

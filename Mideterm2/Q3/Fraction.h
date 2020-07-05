@@ -10,6 +10,7 @@ class Fraction
 {
 public:
    Fraction();
+   Fraction(int number1, int number2);
    ~Fraction();
    void setNumberF(int numb);
    double getNumberF();
