@@ -9,6 +9,7 @@ class GasPump
 public:
   
    GasPump();
+  GasPump(int cars, double dispensed, double charged, double cost);
    ~GasPump();
    void setGas(double gas);
    double getGas();

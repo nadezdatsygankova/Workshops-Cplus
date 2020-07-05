@@ -12,6 +12,26 @@ GasPump::GasPump() :cars(0), dispensed(0), charged(0), cost(0), gallons(0)
 {
    
 }
+
+GasPump::GasPump(int cars, double dispensed, double charged, double cost) : charged{ 0 }, gallons{ 0 }
+{
+   if (cars < 0)
+   {
+      cars = 0;
+   }
+   else if (dispensed < 0)
+   {
+      dispensed = 0;
+   }
+
+   else if (cost < 0)
+   {
+      cost = 0;
+   }
+   
+}
+
+
 //Destructor
 GasPump::~GasPump()
 {
