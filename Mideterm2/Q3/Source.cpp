@@ -4,6 +4,11 @@
 */
 
 
+/*
+Add validations and boundary checks:
+
+check number2 !=0
+*/
 
 
 #include "Fraction.h"
