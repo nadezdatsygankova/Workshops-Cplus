@@ -25,7 +25,9 @@ double CheckingAccount::credit()
 {
    if (withdranC())
    {
-      return getBalance() - fee;
+      double balance = getBalance() - fee;
+      setBalance(balance);
+      return balance;
    }
    
 }
@@ -34,7 +36,9 @@ double CheckingAccount::debit()
 {
    if (withdran())
    {
-      return getBalance() - fee;
+      double balance = getBalance() - fee;
+      setBalance(balance);
+      return balance;
    }
    
 }

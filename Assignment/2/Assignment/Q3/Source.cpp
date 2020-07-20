@@ -13,8 +13,9 @@ int main()
    std::cout << "Current balance is " << First.getBalance() << std::endl;
   std::cout <<"Your balance after adding money is "<< First.credit() << std::endl;
   std::cout << "Your balance after withdraw money is " << First.debit() << std::endl;
-
+  std::cout << "--------------" << std::endl;
   std::cout << "The amount of interest earned by an account is " << Second.calcInterest() << std::endl;
+  std::cout << "--------------" << std::endl;
   std::cout << "Current balance is " << New.getBalance() << std::endl;
   std::cout << "The balance after transaction adding money  - fee is " << New.credit() << std::endl;
   std::cout << "Current balance is " << New.getBalance()<<std::endl;
