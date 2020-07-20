@@ -26,5 +26,5 @@ double SavingAccount::calcInterest()
 {
    
    
-   return getRate() * getBalance();
+   return (getRate() * getBalance());
 }

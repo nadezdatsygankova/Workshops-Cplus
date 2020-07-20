@@ -1,7 +1,7 @@
-﻿  CheckingAccount.cpp
-E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(26,17): error C3867: 'Account::withdranC': non-standard syntax; use '&' to create a pointer to member
-E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(35,16): error C3867: 'Account::withdran': non-standard syntax; use '&' to create a pointer to member
-  SavingAccount.cpp
+﻿  Account.cpp
+  CheckingAccount.cpp
   Source.cpp
-  Account.cpp
   Generating Code...
+E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(31): warning C4715: 'CheckingAccount::credit': not all control paths return a value
+E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(40): warning C4715: 'CheckingAccount::debit': not all control paths return a value
+  Q3.vcxproj -> E:\Наденька\SENECA\C++ OOP\Assignment\Q3\Debug\Q3.exe

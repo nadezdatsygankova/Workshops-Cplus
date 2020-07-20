@@ -33,7 +33,7 @@ double Account::credit()
    double addMoney;
    std::cout << "Enter amount money do you want to add?" << std::endl;
       std::cin >> addMoney;
-   return balance + addMoney;
+   return balance = balance + addMoney;
 }
 
 
