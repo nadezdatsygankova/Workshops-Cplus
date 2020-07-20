@@ -1,0 +1,7 @@
+﻿  CheckingAccount.cpp
+E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(26,17): error C3867: 'Account::withdranC': non-standard syntax; use '&' to create a pointer to member
+E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(35,16): error C3867: 'Account::withdran': non-standard syntax; use '&' to create a pointer to member
+  SavingAccount.cpp
+  Source.cpp
+  Account.cpp
+  Generating Code...
