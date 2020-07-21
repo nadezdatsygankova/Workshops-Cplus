@@ -1,6 +1,7 @@
 #include"Paragraph.h"
 #include<iostream>
 #include <algorithm>
+#include<map>
 
 Paragraph_Analysis::Paragraph_Analysis() :paragraph("")
 {
@@ -22,11 +23,14 @@ std::string Paragraph_Analysis::getString() const
 }
 
 
-void Paragraph_Analysis::SearchWord(std::string searchWord)
+void Paragraph_Analysis::SearchWord()
 {
-   std::string baseFile;
+   std::string baseFile, searchWord;
    baseFile = getString();
   
+   std::cout << "What word do you want to find?" << std::endl;
+   std::cin.ignore();
+   std::getline(std::cin, searchWord);
    if (baseFile.find(searchWord) != std::string::npos)
    {
       std::cout << "The word is in " << baseFile.find(searchWord) << " positon." << std::endl;
@@ -60,17 +64,17 @@ int Paragraph_Analysis::length()
 int Paragraph_Analysis::WordCount()
 {
    std::string par = getString();
-   char ch[10]="";
+ 
    int count=0;
-   for (int i = 0; i < length(); i++)
+   for (int i = 0; i < par.length(); i++)
    {
-      if (par[i] == ch[i])
+      if (par[i] == ' ')
       {
          count = count + 1;
       }
       
    }
-   return count;
+   return count+1;
 }
 int Paragraph_Analysis::LetterCount()
 {
@@ -95,14 +99,23 @@ void Paragraph_Analysis::FindReplaceWord(std::string searchWord, std::string rep
    std::string baseFile;
    baseFile = getString();
    auto position = baseFile.find(searchWord);
-   if (position != std::string::npos)
+   if (position == std::string::npos)
    {
-      baseFile.replace(position, searchWord.size(), replaceWord);
+      std::cout << "Word was not found" << std::endl;
    }
-  
+   else
+   {
+      //while (position != std::string::npos)
+      {
+         baseFile.replace(position, searchWord.size(), replaceWord);
+         position += replaceWord.length();
+      }
+   }
+   setString(baseFile);
+
 }
 
-//I am not sure for this function, maybe we shoud use swap function 
+
 
 void Paragraph_Analysis::FindReplaceLetter(char search, char replace)
 {
@@ -115,7 +128,7 @@ void Paragraph_Analysis::FindReplaceLetter(char search, char replace)
          baseFile[i] = replace;
       }
    }
-
+   setString(baseFile);
 
 }
 
@@ -124,42 +137,26 @@ void Paragraph_Analysis::Summary()
    std::string baseFile;
    baseFile = getString();
 
-   int symbols[26];
+  // int symbols[26];
    
-  int number = 0;
+ // int number = 0;
 
-  for (int i = 0; i < 26; i++)
-     symbols[i] = 0;
-  for (int i = 0; i < length(); i++)
-  {
-     number = -1;
-     if (baseFile[i] >= 'a' && baseFile[i] <= 'z')
-        number = baseFile[i] - 'a';
-     if (baseFile[i] >= 'A' && baseFile[i] <= 'Z')
-        number = baseFile[i] - 'A';
-     if (number >= 0)
-        symbols[number] ++;
+  std::map<char, int> m;
+  for (int i = 0; i < baseFile.length(); i++) {
+     m[baseFile[i]]++;
   }
 
-  for (int i = 0; i < 26; i++)
-  {
-     if (symbols[i] > 0)
-        std::cout <<  'A' + i <<" "<< symbols[i];
+  std::cout << "\nfrequency of each letter :" << std::endl;
+  std::map<char, int>::iterator iter;
+  for (iter = m.begin(); iter != m.end(); iter++) {
+     if ((*iter).first == 0)continue;
+     {
+        std::cout <<"( "<<(*iter).first << " : " << (*iter).second<<")" << std::endl;
+     }
+     
   }
-  /*
-   for (int i = 0; i < length(); i++)
-   {
-      
-       /*  if (baseFile[i] >= 'à' && baseFile[i] <= 'z')
-            symbols[(int)baseFile[i] - 'à']++;
-      if (baseFile[i] >= 'À' &&
-         baseFile[i] <= 'Z')
-         symbols[baseFile[i] - 'À']++;
-   }
+ 
 
-
-   for (int j = 0; j < 26; j++)
-      std::cout << (char)(j + 'À') << "\t" << symbols[j] << std::endl;*/
 
 
 

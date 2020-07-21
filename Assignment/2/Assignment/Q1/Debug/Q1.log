@@ -1,10 +1,13 @@
 ﻿  Paragraph.cpp
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(133,23): error C2059: syntax error: ')'
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(138,10): error C2065: 'string': undeclared identifier
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(139,10): error C2065: 'mas': undeclared identifier
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(139,14): error C2065: 'string': undeclared identifier
   Source.cpp
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(79,53): error C3867: 'Paragraph_Analysis::WordCount': non-standard syntax; use '&' to create a pointer to member
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(84,54): error C3867: 'Paragraph_Analysis::LetterCount': non-standard syntax; use '&' to create a pointer to member
-E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(122,1): error C2143: syntax error: missing ';' before '}'
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(56,9): warning C4102: 'case2': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(62,9): warning C4102: 'case3': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(71,9): warning C4102: 'case4': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(79,9): warning C4102: 'case5': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(85,9): warning C4102: 'case6': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(90,9): warning C4102: 'case7': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(101,9): warning C4102: 'case8': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(112,9): warning C4102: 'case9': unreferenced label
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(118,10): warning C4102: 'case10': unreferenced label
   Generating Code...
+  Q1.vcxproj -> E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Debug\Q1.exe

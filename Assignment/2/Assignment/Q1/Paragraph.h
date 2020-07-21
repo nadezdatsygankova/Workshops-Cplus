@@ -10,7 +10,7 @@ public:
    std::string getString() const;
    int length();
 
-   void SearchWord(std::string search);
+   void SearchWord();
    void SearchLetter(char searchLetter);
    
    int WordCount();

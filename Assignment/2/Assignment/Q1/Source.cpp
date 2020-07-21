@@ -1,10 +1,10 @@
 #include"Paragraph.h"
 #include<iostream>
-
+#include <string>
 
 void menu()
 {
-   std::cout << "String Manipulator" << std::endl;
+   std::cout << "\n\nString Manipulator" << std::endl;
    std::cout << "--------------------" << std::endl;
    std::cout << "Choose an option: " << std::endl;
    std::cout << "1. Input a paragraph" << std::endl;
@@ -29,70 +29,77 @@ int main()
 
    Paragraph_Analysis New("There was a long way to find you");
 
-   menu();
+   
    int option;
-   std::cin >> option;
+  
+   int size = 500;
 
    do {
-
+      menu();
+      std::cin >> option;
       switch (option)
       {
       case 1:
       {
          std::string  parag;
          std::cout << "Enter a paragraph (up to 500 letters)  :" << std::endl;
-         for (int i = 0; i < 500; i++)
-         {
-            if (parag[i] != '\x0A' || parag[i] != '\x0D')
-            {
-               std::cin >> parag[i];
-            }
-            
-         }
+         std::cin.ignore();
+         getline(std::cin, parag);
+         /*while (parag.length() > size) 
+         {       
+               std::cout << "A paragraph shoul be less  500 letters)  " << std::endl;
+               getline(std::cin, parag);
+         }*/
          New.setString(parag);
          break;
       }
 
-   case2:
+   case 2:
       {
          std::cout << "The paragraph: " << std::endl;
          std::cout << New.getString() << std::endl;
          break;
       }
-   case3:
+   case 3:
       {
-
-         std::cout << "What word do you want to find?" << std::endl;
-         std::getline(std::cin, searchWord);
-         New.SearchWord(searchWord);
+         New.SearchWord();
+         break;
 
       }
-   case4:
+   case 4:
       {
          std::cout << "What letter do you want to find?" << std::endl;
+         std::cin.ignore();
          std::cin >> searchLetter;
          New.SearchLetter(searchLetter);
+         break;
       }
 
-   case5:
+   case 5:
       {
-         std::cout << "There are " << New.WordCount() << "words" << std::endl;
+         std::cout << "There are " << New.WordCount() << " words" << std::endl;
+         break;
       }
 
-   case6:
+   case 6:
       {
-         std::cout << "There are " << New.LetterCount()<< "letters" << std::endl;
+         std::cout << "There are " << New.LetterCount()<< " letters" << std::endl;
+         break;
       }
-   case7:
+   case 7:
       {
          std::string searchWord, replaceWord;
          std::cout << "What word do you want to find?" << std::endl;
+         std::cin.ignore();
          std::cin >> searchWord;
          std::cout << "What word do you want to replace?" << std::endl;
+         std::cin.ignore();
          std::cin >> replaceWord;
          New.FindReplaceWord(searchWord, replaceWord);
+         std::cout << New.getString() << std::endl;
+         break;
       }
-   case8:
+   case 8:
       {
          char search, replace;
          std::cout << "What letter do you want to find?" << std::endl;
@@ -100,23 +107,31 @@ int main()
          std::cout << "What letter do you want to replace?" << std::endl;
          std::cin >> replace;
          New.FindReplaceLetter(search, replace);
+         std::cout << New.getString()<<std::endl;
+         break;
       }
-   case9:
+   case 9:
       {
-
+         std::cout << "Summary of frequency of each letter within the paragraph" << std::endl;
+         New.Summary();
+         break;
       }
-   case10:
+   case 10://exit program
       {
+         std::cout << "Thank you for using this program!" << std::endl;
+         break;
+      }
+
+      default:
+         std::cout << "Invalid input" << std::endl;
 
       }
 
-      }
-
-   } while (option != 11);
+   } while (option != 10);
 
    
 
    
-
+   return 0;
 
 }
