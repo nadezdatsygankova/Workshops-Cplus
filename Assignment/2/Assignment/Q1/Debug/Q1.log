@@ -1,0 +1,10 @@
+﻿  Paragraph.cpp
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(133,23): error C2059: syntax error: ')'
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(138,10): error C2065: 'string': undeclared identifier
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(139,10): error C2065: 'mas': undeclared identifier
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Paragraph.cpp(139,14): error C2065: 'string': undeclared identifier
+  Source.cpp
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(79,53): error C3867: 'Paragraph_Analysis::WordCount': non-standard syntax; use '&' to create a pointer to member
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(84,54): error C3867: 'Paragraph_Analysis::LetterCount': non-standard syntax; use '&' to create a pointer to member
+E:\Наденька\SENECA\C++ OOP\Assignment\Q1\Source.cpp(122,1): error C2143: syntax error: missing ';' before '}'
+  Generating Code...
