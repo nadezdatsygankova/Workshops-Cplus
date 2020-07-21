@@ -121,13 +121,21 @@ void Paragraph_Analysis::FindReplaceLetter(char search, char replace)
 {
    std::string baseFile;
    baseFile = getString();
+   int coun = 0;
    for (int i = 0; i < length(); i++)
    {
       if (baseFile[i] == search)
       {
          baseFile[i] = replace;
-      }
+         coun++;
+      }   
    }
+
+   if (coun == 0)
+   {
+      std::cout << "Does not contain this letter" << std::endl;
+   }
+  
    setString(baseFile);
 
 }

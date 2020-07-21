@@ -45,11 +45,6 @@ int main()
          std::cout << "Enter a paragraph (up to 500 letters)  :" << std::endl;
          std::cin.ignore();
          getline(std::cin, parag);
-         /*while (parag.length() > size) 
-         {       
-               std::cout << "A paragraph shoul be less  500 letters)  " << std::endl;
-               getline(std::cin, parag);
-         }*/
          New.setString(parag);
          break;
       }
@@ -96,7 +91,7 @@ int main()
          std::cin.ignore();
          std::cin >> replaceWord;
          New.FindReplaceWord(searchWord, replaceWord);
-         std::cout << New.getString() << std::endl;
+         std::cout <<"New paragraph: \n"<< New.getString() << std::endl;
          break;
       }
    case 8:
@@ -107,7 +102,7 @@ int main()
          std::cout << "What letter do you want to replace?" << std::endl;
          std::cin >> replace;
          New.FindReplaceLetter(search, replace);
-         std::cout << New.getString()<<std::endl;
+         std::cout << "New paragraph: \n" << New.getString()<<std::endl;
          break;
       }
    case 9:
