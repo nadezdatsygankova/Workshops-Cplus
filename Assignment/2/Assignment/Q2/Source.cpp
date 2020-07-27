@@ -1,103 +1,216 @@
-/*Author: Nadezda Tsygankova,
-Diego Pena Sosa
-  Description: Assignment1 /Q2
-  Due date:06/19/2020
-*/
+#include<iostream>
+#include <array>
+#include <algorithm>
+
+
+
+
+int getValue();
+void sortArray(int* array, int length);
+int binarySearch(int* array, int num, int length);
+double average(int* array, int length);
+double median(int* array, int length);
+int mode(int* array, int length);
+
+int main()
+{
+
+   int number = getValue();
+   int searchNumber;
+   int* array = new int[number];
+   std::cout << "Enter numbers: " << std::endl;
+   for (int i = 0; i < number; i++)
+   {
+      int numt;
+      std::cin >> numt;
+      while (numt <= 0) {
+         std::cout << "Enter a positive numbers. " << std::endl;
+         std::cin >> numt;
+      }
+
+      array[i] = numt;
+   }
+   do
+   {
+      std::cout << "Enter a number to search in the array: ";
+      std::cin >> searchNumber;
+      if (searchNumber < 0)
+      {
+         std::cout << "Enter a positive numbers." << std::endl;
+      }
+   } while (searchNumber < 0);
+
+
+   sortArray(array, number);
+   int find = binarySearch(array, searchNumber, number);
+
+   double averageN = average(array, number);
+
+   double medianN = median(array, number);
+
+   int modeN = mode(array, number);
+
+
+
+   std::cout << "The size of the array: " << number << std::endl;
+
+   std::cout << "The sorted array: " << std::endl;
+   for (int i = 0; i < number; i++)
+   {
+      std::cout << array[i] << std::endl;
+   }
+
+   std::cout << "The integer being searched for is " << searchNumber << std::endl;
+
+   if (find != -1)
+      std::cout << "The location of that integer is " << find << std::endl;
+   else
+      std::cout << "The integer is not in the array" << std::endl;
+
+   std::cout << "The average is " << averageN << std::endl;
+   std::cout << "The median is " << medianN << std::endl;
+   std::cout << "The mode is " << modeN << std::endl;
+
+   delete[] array;
+   array = nullptr;
+
+
+
+
+   return 0;
+}
+
 /*
-Checked for this test:
 
-1.all different variations (MO,mo,mO,Mo,Tu,TU,tu,tU,We,WE,wE,we,Th,TH,tH,th,Fr,FR,fr,fR,Sa,SA,sa,sA,Su,su,SU,sU)
-2. test calculation (Mo,Tu,We,Th) time - 7:55 duration- 100 cost -39.25;
-                    (Mo,Tu,We,Th) time - 17:00 duration- 10 cost -4;
-						  (Mo,Tu,We,Th) time - 17:55 duration- 10 cost -3.25;
-						  (Mo,Tu,We,Th) time - 23:59 duration- 10 cost -2.5;
-						  --------------------------
-						  (Fr) time - 7:55 duration- 100 cost -39.25;
-                    (Fr) time - 17:00 duration- 10 cost -4;
-						  (Fr) time - 17:55 duration- 10 cost -3.25;
-						  (Fr) time - 23:59 duration- 10 cost -1.6;
-						  ---------------------
-						  (Sa) time - 7:55 duration -100 cost -15;
-						  -------------
-						  (Su) time - 23:59 duration -10 cost -2.4
-
-
+function get value - user;
+number of elements without mistakes
 
 */
+int getValue()
+
+
+{
+   int number;
+   do
+   {
+      std::cout << "Enter the number of elements:  ";
+
+      std::cin >> number;
 
 
 
+      if (std::cin.fail())
+      {
+         std::cin.clear();
+         std::cin.ignore(32767, '\n');
 
+         std::cout << "Please try again.\n";
+      }
+      else
+      {
+         std::cin.ignore(32767, '\n');
 
+      }
 
-#include <iostream>
-#include <string>
-#include <sstream>
-#include "Calltime.h" 
+      if (number <= 0)
+      {
+         std::cout << "Enter number more than 0" << std::endl;
+      }
 
+   } while (number <= 0);
 
+   return number;
 
+}
 
-int main() {
+void sortArray(int* array, int length)
+{
+   for (int startIndex = 0; startIndex < length; ++startIndex)
+   {
+      int smallestIndex = startIndex;
+      for (int currentIndex = startIndex + 1; currentIndex < length; ++currentIndex)
+      {
+         if (array[currentIndex] < array[smallestIndex])
 
-	int option;
-	std::string theTime;
-	int duration;
-	char day1, day2;
-	callTime time;
-	
-
-	
-	do {
-
-		std::cout << "Select an option:\n1 - Calculate cost of a call\n2 - Exit\n";
-
-      std::cin >> option;
-
-		switch (option)
-		{
-		case 1:
-			std::cout << "Enter day of the week of call using the following format:" << std::endl;
-			std::cout << "Mo - Monday\nTu - Tuesday\nWe - Wednesday\nTh - Thursday\nFr- Friday\nSa - Saturday\nSu - Sunday\n";
-			std::cin >> day1 >> day2;
-			std::cin.clear();
-			std::cin.ignore(100, '\n');
-			do
-			{
-				std::cout << "Enter call start time using (hh:mm):" << std::endl;
-				std::getline(std::cin, theTime);
-			} while (time.timeHour(theTime) == 0);
-		
-			do
-			{
-				std::cout << "Enter call duration in minutes:" << std::endl;
-				std::cin >> duration;
-				if (duration < 0 || duration > 479)
-				{
-					std::cout << "Invalid input\n";
-				}
-			} while (duration < 0 || duration > 479);
-			
-			time.startTime(theTime, duration, day1, day2);
-			break;
-		case 2:
-			std::cout << "Thank you, have a great day";
-			exit(0);
-		
-		default:
-			std::cout << "Invalid input"<<std::endl;
-		
-		}
-
-	} while (option != 2);
-
-
-	
-	
-	
-
-	return 0;
+            smallestIndex = currentIndex;
+      }
+      std::swap(array[startIndex], array[smallestIndex]);
+   }
 }
 
 
 
+int binarySearch(int* array, int num, int length)
+{
+
+   for (int i = 0; i < length; i++)
+   {
+      if (array[i] == num)
+      {
+         return (i + 1);
+      }
+   }
+
+   return -1;
+
+}
+
+
+double average(int* array, int length)
+{
+   int sum = 0;
+   int result = 0;
+   for (int i = 0; i < length; i++)
+   {
+      sum += array[i];
+   }
+   result = (sum / length);
+
+   return result;
+}
+
+
+
+double median(int* array, int length)
+{
+   if (length % 2 == 0)
+   {
+      return (array[length / 2 - 1] + array[length / 2]) / 2;
+   }
+   return array[(length / 2)];
+}
+
+
+
+int mode(int* array, int length)
+{
+   int countMax = 1;
+   int firstE = array[0];
+   int count = 1;
+   for (int i = 0; i < length; i++)
+   {
+      if (array[i] == array[i - 1])
+      {
+         count++;
+      }
+      else
+      {
+         if (count > countMax)
+         {
+            countMax = count;
+            firstE = array[i - 1];
+         }
+         count = 1;
+      }
+
+   }
+
+   if (count > countMax)
+   {
+      countMax = count;
+      firstE = array[length - 1];
+   }
+
+
+   return firstE;
+}
