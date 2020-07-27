@@ -18,7 +18,7 @@ int main()
    int number = getValue();
    int searchNumber;
 
-   std::vector<int> array;
+   std::vector<int> vec;
    std::cout << "Enter numbers of elements: " << std::endl;
    for (int i = 0; i < number; i++)
    {
@@ -29,18 +29,18 @@ int main()
          std::cin >> numt;
       }
 
-      array.push_back(numt);
+      vec.push_back(numt);
    }
    
 
-   sortArray(array);
+   sortArray(vec);
 
    std::cout << "The size of the vector: " << number << std::endl;
 
    std::cout << "The sorted vector: " << std::endl;
    for (int i = 0; i < number; i++)
    {
-      std::cout << array[i] << std::endl;
+      std::cout << vec[i] << std::endl;
    }
 
    do
@@ -53,7 +53,7 @@ int main()
       }
    } while (searchNumber < 0);
 
-   int find = binarySearch(array, searchNumber);
+   int find = binarySearch(vec, searchNumber);
 
 
    std::cout << "The integer being searched for is " << searchNumber << std::endl;
@@ -63,15 +63,15 @@ int main()
    else
       std::cout << "The integer is not in the array" << std::endl;
 
-   double averageN = average(array);
+   double averageN = average(vec);
 
    std::cout << "The average is " << averageN << std::endl;
 
-   double medianN = median(array);
+   double medianN = median(vec);
 
    std::cout << "The median is " << medianN << std::endl;
    
-   int modeN = mode(array);
+   int modeN = mode(vec);
 
    std::cout << "The mode is " << modeN << std::endl;
 
@@ -134,11 +134,11 @@ void sortArray(std::vector<int> &vector)
       int smallestIndex = startIndex;
       for (int currentIndex = startIndex + 1; currentIndex < length; ++currentIndex)
       {
-         if (vector[currentIndex] < vector[smallestIndex])
+         if (vector.at(currentIndex) < vector.at(smallestIndex))
 
             smallestIndex = currentIndex;
       }
-      std::swap(vector[startIndex], vector[smallestIndex]);
+      std::swap(vector.at(startIndex), vector.at(smallestIndex));
    }
 }
 
@@ -156,15 +156,16 @@ int binarySearch(std::vector<int> vector, const int num)
    {
       if (num == vector[mid])
          index = mid;
-      else if (num > vector[mid])
+      else if (num < vector[mid])
       {
-         first = mid + 1;
+         last = mid - 1;
+        
       }
       else
-         last = mid - 1;
+         first = mid + 1;
 
       mid = (first + last + 1) / 2;
-   } while ((index == -1 && first <= last));
+   } while ((index == -1) && (first <= last));
    
    return index;
 
@@ -205,7 +206,7 @@ int mode(std::vector<int> vector)
    int countMax = 1;
    int firstE = vector[0];
    int count = 1;
-   for (int i = 0; i < length; i++)
+   for (int i = 1; i < length; i++)
    {
       if (vector[i] == vector[i - 1])
       {
