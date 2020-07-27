@@ -30,6 +30,19 @@ int main()
 
       array[i] = numt;
    }
+
+   sortArray(array, number);
+
+
+   std::cout << "The size of the array: " << number << std::endl;
+
+   std::cout << "The sorted array: " << std::endl;
+   for (int i = 0; i < number; i++)
+   {
+      std::cout << array[i] << std::endl;
+   }
+
+
    do
    {
       std::cout << "Enter a number to search in the array: ";
@@ -41,24 +54,8 @@ int main()
    } while (searchNumber < 0);
 
 
-   sortArray(array, number);
+
    int find = binarySearch(array, searchNumber, number);
-
-   double averageN = average(array, number);
-
-   double medianN = median(array, number);
-
-   int modeN = mode(array, number);
-
-
-
-   std::cout << "The size of the array: " << number << std::endl;
-
-   std::cout << "The sorted array: " << std::endl;
-   for (int i = 0; i < number; i++)
-   {
-      std::cout << array[i] << std::endl;
-   }
 
    std::cout << "The integer being searched for is " << searchNumber << std::endl;
 
@@ -67,8 +64,15 @@ int main()
    else
       std::cout << "The integer is not in the array" << std::endl;
 
+   double averageN = average(array, number);
    std::cout << "The average is " << averageN << std::endl;
+
+   double medianN = median(array, number);
    std::cout << "The median is " << medianN << std::endl;
+
+   int modeN = mode(array, number);
+
+  
    std::cout << "The mode is " << modeN << std::endl;
 
    delete[] array;
@@ -142,17 +146,30 @@ void sortArray(int* array, int length)
 
 int binarySearch(int* array, int num, int length)
 {
+   int first = 0;
+   int last = length;
+   int index = -1;
+   int mid = (first + last + 1) / 2;
 
-   for (int i = 0; i < length; i++)
+   do
    {
-      if (array[i] == num)
+
+      if (num == array[mid])
       {
-         return (i + 1);
+         index = mid;
       }
-   }
+      else if (num < array[mid])
+      {
+         last = mid - 1;
+      }
+      else 
+         
+         first = mid + 1;
 
-   return -1;
-
+      mid = (first + last + 1) / 2;
+   } while ((index == -1) && (first <= last));
+ 
+   return index;
 }
 
 
@@ -187,7 +204,7 @@ int mode(int* array, int length)
    int countMax = 1;
    int firstE = array[0];
    int count = 1;
-   for (int i = 0; i < length; i++)
+   for (int i = 1; i < length; i++)
    {
       if (array[i] == array[i - 1])
       {
