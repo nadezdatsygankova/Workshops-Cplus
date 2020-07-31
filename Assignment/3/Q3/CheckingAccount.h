@@ -10,8 +10,8 @@ public:
    CheckingAccount(double newBalance, double newFee);
    void setFee(double newFee);
    double getFee() const;
-   double credit();
-   double debit();
+   double credit(double money);
+   double debit(double money);
 
 private:
    double fee;

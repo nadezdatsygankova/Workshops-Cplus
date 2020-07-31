@@ -7,7 +7,7 @@ Account::Account():balance(0.0)
 {}
 Account::Account(double newBalance)
 {
-   if (newBalance >= 0)
+   if (newBalance >= 0.0)
    {
       balance = newBalance;
    }
@@ -27,62 +27,52 @@ double Account::getBalance() const
 {
    return balance;
 }
+
 //function credit adds an amount to the current balance
-double Account::credit()
+bool Account::credit(double addmoney)
 {
-   double addMoney;
-   std::cout << "Enter amount money do you want to add?" << std::endl;
-      std::cin >> addMoney;
-   return balance = balance + addMoney;
+   if (addmoney >= 0)
+   {
+      balance = balance + addmoney;
+      return true;
+   }
+   
+  
+   else
+   {
+      std::cout << "Can not negative numbers" << std::endl;
+      return false;
+   }
 }
 
 
 
 // function debit withdraw money from the Account and ensure that the debit amount does not exceed the Account's balance
-double Account::debit()
+bool Account::debit(double money)
 {
-   //  double balance = Account::getBalance();
-   double money;
-   do {
-   std::cout << "Enter amount money do you want to get?" << std::endl;
-   std::cin >> money;
-  
-   
 
-   if (money >= balance)
+ 
+   if (money >= 0)
    {
-      std::cout << "Debit amount exceeded account balance" << std::endl;
-   }
-}while ( money >= balance);
-      if (balance >= money)
-       {
+        if (balance >= money)
+      {
          balance = balance - money;
-         
+         return true;
+      }
+        else
+        {
+           std::cout << "Debit amount exceeded account balance" << std::endl;
+           return false;
         }
+   }
 
-
-
-   return balance;
-}
-
-
-bool Account::withdran()
-{
-   if (balance > debit())
+   else
    {
+      std::cout << "Can not negative numbers" << std::endl;
       return false;
    }
-   else
-      return true;
+  
 }
 
 
-bool Account::withdranC()
-{
-   if (balance < credit())
-   {
-      return false;
-   }
-   else
-      return true;
-}
+

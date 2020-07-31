@@ -21,24 +21,29 @@ double CheckingAccount::getFee() const
    return fee;
 }
 
-double CheckingAccount::credit()
+double CheckingAccount::credit(double money)
 {
-   if (withdranC())
+   if (Account::credit(money))
    {
       double balance = getBalance() - fee;
       setBalance(balance);
       return balance;
-   }
+  }
+  
+    
+   
    
 }
 
-double CheckingAccount::debit()
+double CheckingAccount::debit(double money)
 {
-   if (withdran())
+   if (Account::debit(money))
    {
       double balance = getBalance() - fee;
       setBalance(balance);
       return balance;
    }
+   else
+      return getBalance();
    
 }
