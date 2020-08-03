@@ -46,17 +46,10 @@ double Account::getBalance() const
 //function credit adds an amount to the current balance
 void Account::credit(double addmoney)
 {
-   if (addmoney >= 0)
-   {
+   
       balance = balance + addmoney;
       
-   }
-   
-   else
-   {
-      std::cout << "Can not negative numbers" << std::endl;
-    
-   }
+  
 }
 
 void Account::setRate(double newRate)
@@ -77,8 +70,7 @@ bool Account::debit(double money)
 {
 
  
-   if (money >= 0)
-   {
+  
         if (balance >= money)
       {
          balance = balance - money;
@@ -86,16 +78,10 @@ bool Account::debit(double money)
       }
         else
         {
-         //  std::cout << "Debit amount exceeded account balance" << std::endl;
+         
            return false;
         }
-   }
-
-   else
-   {
-      std::cout << "Can not negative numbers" << std::endl;
-      return false;
-   }
+ 
   
 }
 

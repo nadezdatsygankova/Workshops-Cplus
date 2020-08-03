@@ -1,4 +1,8 @@
-﻿  Source.cpp
-E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday - vector\Source.cpp(33,25): warning C4018: '<': signed/unsigned mismatch
-E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday - vector\Source.cpp(73,25): warning C4018: '<': signed/unsigned mismatch
+﻿  Account.cpp
+  CheckingAccount.cpp
+  SavingAccount.cpp
+  Source.cpp
+E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday - vector\Source.cpp(35,28): warning C4018: '<': signed/unsigned mismatch
+E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday - vector\Source.cpp(87,28): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   Q3.vcxproj -> E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday - vector\Debug\Q3.exe
