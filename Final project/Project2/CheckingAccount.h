@@ -8,6 +8,7 @@ public:
    //constructor
    CheckingAccount();
    CheckingAccount(double newBalance, double newFee, int at);
+   ~CheckingAccount();
    virtual int getAT();//get AT
    void setFee(double newFee); // fee for transiction
    double getFee() const;

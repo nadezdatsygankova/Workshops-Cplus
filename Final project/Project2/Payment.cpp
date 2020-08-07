@@ -22,6 +22,8 @@ Payment::Payment(float newPayment, std::string newType)
    type = newType;
 }
 
+Payment::~Payment()
+{}
 
 void Payment::setPaymet(float newPayment)
 {

@@ -14,6 +14,11 @@ CheckingAccount::CheckingAccount(double newBalance, double newFee, int at) : Acc
       AT = 2;
    }
 }
+
+CheckingAccount::~CheckingAccount()
+{
+
+}
 int CheckingAccount::getAT()
 {
    return AT;

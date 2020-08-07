@@ -12,6 +12,10 @@ CashPayment::CashPayment(float newPayment, std::string newType) : Payment(newPay
 
 }
 
+CashPayment::~CashPayment()
+{
+
+}
 
 
 

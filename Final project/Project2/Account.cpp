@@ -23,6 +23,11 @@ Account::Account(double newBalance, int at)
 
 }
 
+Account::~Account()
+{
+
+}
+
 int Account::getAT()
 {
    return AT;

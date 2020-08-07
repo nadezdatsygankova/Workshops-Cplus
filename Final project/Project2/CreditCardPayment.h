@@ -6,6 +6,7 @@ class CreditCardPayment :public Payment
 public:
    CreditCardPayment();
    CreditCardPayment(float newPayment, std::string newType, std::string newNameCard, std::string newExpiredDate, int newCardNumber);
+   ~CreditCardPayment() ;
    void setNameCard(std::string newNameCard);
    std::string getNameCard();
    void paymentDetails();

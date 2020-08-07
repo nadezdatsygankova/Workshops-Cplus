@@ -1,18 +1,25 @@
 #include"Person.h"
 #include <vector>
-
+#include"Account.h"
+#include"SavingAccount.h"
+#include"CheckingAccount.h"
 Person::Person()
 {
    name = "";
    in = 0;
-  // acc=nullptr;
-   creditCardAmount=0.0;
+   acc = nullptr;
+   creditCardAmount = 0.0;
+}
+
+Person::~Person()
+{
+
 }
 Person::Person(std::string newName, long newIn)
 {
    name = newName;
    in = newIn;
-   creditCardAmount = 3000;
+   creditCardAmount = 3000.0;
    std::cout << "how many accounts?" << std::endl;
    int x;
    std::cin >> x;
@@ -22,26 +29,26 @@ Person::Person(std::string newName, long newIn)
 void Person::setAccount(int x)
 {
 
-   //acc = new Account [x];
-   std::vector<Account*> p (x);
    std::cout << "Select Account type: " << std::endl;
    std::cout << "1. Saving Account" << std::endl;
    std::cout << "2. Checking Account" << std::endl;
    int option;
    std::cin >> option;
-
+ 
+   std::vector<Account*> acc(x);
    if (option == 1)
+
    {
-      for (int i = 0; i < p.size(); i++)
+      for (int i = 0; i < acc.size(); i++)
       {
-         p[i] = new SavingAccount();
-         if (p[i]->getAT() == 1)
+         acc[i] = new SavingAccount();
+         if (acc[i]->getAT() == 1)
          {
             double addMoney;
             double money;
-            p[i]->setBalance(1000.0);
-            p[i]->setRate(0.02);
-            std::cout << i + 1 << " account. Current balance is  " << p[i]->getBalance() << std::endl;
+            acc[i]->setBalance(1000.0);
+            acc[i]->setRate(0.02);
+            std::cout << i + 1 << " account. Current balance is  " << acc[i]->getBalance() << std::endl;
             do {
                std::cout << "Enter amount money do you want to add?" << std::endl;
                std::cin >> addMoney;
@@ -50,8 +57,8 @@ void Person::setAccount(int x)
                   std::cout << "Not negative number" << std::endl;
                }
             } while (addMoney < 0);
-            p[i]->credit(addMoney);
-            std::cout << "Your balance after adding money is " << p[i]->getBalance() << std::endl;
+            acc[i]->credit(addMoney);
+            std::cout << "Your balance after adding money is " << acc[i]->getBalance() << std::endl;
 
             do
             {
@@ -63,20 +70,20 @@ void Person::setAccount(int x)
                }
             } while (money < 0);
 
-            if (p[i]->debit(money))
+            if (acc[i]->debit(money))
             {
-               std::cout << "Your balance after withdraw money is " << p[i]->getBalance() << std::endl;
+               std::cout << "Your balance after withdraw money is " << acc[i]->getBalance() << std::endl;
             }
             else
             {
                std::cout << "Not enough money in the account" << std::endl;
-               std::cout << "Your balance: " << p[i]->getBalance() << std::endl;
+               std::cout << "Your balance: " << acc[i]->getBalance() << std::endl;
             }
 
-            double inter = p[i]->calcInterest();
+            double inter = acc[i]->calcInterest();
             std::cout << " Interest amount :" << inter << std::endl;
-            p[i]->credit(inter);
-            std::cout << "Your balance with interest: " << p[i]->getBalance() << std::endl;
+            acc[i]->credit(inter);
+            std::cout << "Your balance with interest: " << acc[i]->getBalance() << std::endl;
          }
          std::cout << "---------------------" << std::endl;
       }
@@ -84,13 +91,13 @@ void Person::setAccount(int x)
    }
    else if (option == 2)
    {
-      for (int i = 0; i < p.size(); i++)
+      for (int i = 0; i < acc.size(); i++)
       {
-         p[i] = new CheckingAccount();
+         acc[i] = new CheckingAccount();
 
-         p[i]->setBalance(1000.0);
-         std::cout << i + 1 << " account. Current balance is  " << p[i]->getBalance() << std::endl;
-         p[i]->setFee(2);
+         acc[i]->setBalance(1000.0);
+         std::cout << i + 1 << " account. Current balance is  " << acc[i]->getBalance() << std::endl;
+         acc[i]->setFee(2);
 
 
          double addMoney1, money1;
@@ -103,8 +110,8 @@ void Person::setAccount(int x)
             }
          } while (addMoney1 < 0);
          std::cout << "Your balance after adding money is ";
-         p[i]->credit(addMoney1);
-         std::cout << p[i]->getBalance() << std::endl;
+         acc[i]->credit(addMoney1);
+         std::cout << acc[i]->getBalance() << std::endl;
 
          do {
             std::cout << "Enter amount money do you want to get?" << std::endl;
@@ -116,26 +123,24 @@ void Person::setAccount(int x)
          } while (money1 < 0);
 
 
-         if (p[i]->debit(money1))
+         if (acc[i]->debit(money1))
          {
             std::cout << "Your balance after withdraw money is ";
-            std::cout << p[i]->getBalance() << std::endl;
+            std::cout << acc[i]->getBalance() << std::endl;
 
          }
          else
          {
             std::cout << "Not enough money in the account" << std::endl;
-            std::cout << "Your balance is" << p[i]->getBalance() << std::endl;
+            std::cout << "Your balance is" << acc[i]->getBalance() << std::endl;
          }
 
          std::cout << "---------------------" << std::endl;
       }
    }
-
-
-  
-
 }
+
+
 
 void Person::setName(std::string newName)
 {
@@ -154,14 +159,3 @@ int Person::getIn()
    return in;
 }
 
-/*
-std::vector<Account*> Person::getAccount()
-{
-   return acc(x);
-}
-*/
-
-double Person::getAccount()
-{
-   return acc.getBalance();
-}

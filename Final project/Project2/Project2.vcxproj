@@ -141,10 +141,10 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="CashPayment.cpp" />
     <ClCompile Include="CheckingAccount.cpp" />
-    <ClCompile Include="CreaditCardPayment.cpp" />
+    <ClCompile Include="SavingAccount1.cpp" />
+    <ClCompile Include="CrediteCardPayment.cpp" />
     <ClCompile Include="Payment.cpp" />
     <ClCompile Include="Person.cpp" />
-    <ClCompile Include="SavingAccount.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

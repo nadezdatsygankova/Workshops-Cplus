@@ -11,13 +11,14 @@ public:
    //constructor
    Payment();
    Payment(float newPayment, std::string newType);
+    ~Payment();
 
    void setPaymet(float newPayment);
    float getPayment();
    void setType(std::string newType);
    std::string getType();
 
-   void paymentDetails();
+   virtual void paymentDetails();
 
 
 private:

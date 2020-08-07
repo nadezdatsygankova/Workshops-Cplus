@@ -8,19 +8,22 @@ private:
 
    std::string name;
    long in;
-  // Account* acc;
-   Account acc;
-   double creditCardAmount;
+   Account* acc=nullptr;
+  // Account acc;
+   double creditCardAmount=3000.0;
 public:
    Person();
+   ~Person();
    Person(std::string newName, long newIn);
    
-   void setAccount(int x);
+  
    void setName(std::string newName);
    std::string getName();
    void setIn(int newIn);
    int getIn();
+
    //std::vector<Account*> getAccount();
-   double getAccount();
+   void setAccount(int x);
+  // double getAccount();
 
 };

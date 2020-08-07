@@ -12,10 +12,11 @@ private:
 public:
    SavingAccount();
    SavingAccount(double newBalance, double newRate, int at);
+   ~SavingAccount();
    virtual int getAT();
    void setRate(double newRate);
    double getRate() const;
 
-   double calcInterest();
+   double calcInterest() ;
 
 };

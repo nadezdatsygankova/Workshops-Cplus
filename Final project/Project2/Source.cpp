@@ -196,10 +196,7 @@ int main()
 
    */
 
-Person Mark("Mark",25635);
-Person Leo("Leo",45877);
-Payment Cash(152.2,"shopping");
-Payment Mk(42.5,"food");
+
 
 //std::vector <std::vector<Person> v{{{}}}
 /*
@@ -222,7 +219,7 @@ std::cout << arr[0].getIn() << std::endl;
 std::cout << arr[1].getName() << std::endl;
 std::cout << arr[1].getIn() << std::endl;
 */
-
+/*
 Person* arr=new Person[2];
 
 arr[0] = Person("Mark", 25635);
@@ -230,6 +227,24 @@ std::cout << arr[0].getName() << std::endl;
 std::cout << arr[0].getIn() << std::endl;
 std::cout << arr[0].getAccount() << std::endl;
 delete[]arr;
+*/
+
+//Account AccountN;
+//SavingAccount SavAcc;
+//CheckingAccount CheckAcc;
+//Payment Pay(152.0,"shopping");
+CashPayment CasPay(152.0, "shopping");
+CreditCardPayment CredCar(152.2,"MK","Nad Pr","12/20",1524587);
+Person Aleksa("Aleksa", 152452);
+Person Mark("Mark",458725);
+
+Person* arr =new Person[2];
+arr[0] = Person("Bob", 45263);
+std::cout << "Name: " << arr[0].getName() << "ID: " << arr[0].getIn() << std::endl;
+//std::cout << arr[0].getAccount();
+
+delete[] arr;
+
    return 0;
 
 }

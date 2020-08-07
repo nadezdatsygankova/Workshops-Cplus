@@ -24,43 +24,43 @@
     <ClCompile Include="CashPayment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CreaditCardPayment.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CheckingAccount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SavingAccount.cpp">
+    <ClCompile Include="Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="CrediteCardPayment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SavingAccount1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Payment.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Account.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CashPayment.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CreditCardPayment.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Account.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Person.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CheckingAccount.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditCardPayment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Payment.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SavingAccount.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

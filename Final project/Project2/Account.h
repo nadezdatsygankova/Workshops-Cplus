@@ -4,6 +4,7 @@ class Account
 public:
    Account();
    Account(double newBalance, int at);
+    ~Account();
    void setBalance(double newBalance);
    virtual int getAT();
    double getBalance() const;
