@@ -3,9 +3,9 @@
 
 
 //constructors
-Account::Account() :balance(0.0), AT(0)
+Account::Account() :balance(0.0)
 {}
-Account::Account(double newBalance, int at)
+Account::Account(double newBalance)
 {
    if (newBalance >= 0.0)
    {
@@ -16,10 +16,7 @@ Account::Account(double newBalance, int at)
       balance = 0.0;
       std::cout << "The initial balance was invalid" << std::endl;
    }
-   if (at != 0)
-   {
-      AT = 0;
-   }
+  
 
 }
 
@@ -28,10 +25,7 @@ Account::~Account()
 
 }
 
-int Account::getAT()
-{
-   return AT;
-}
+
 
 double Account::calcInterest()
 {

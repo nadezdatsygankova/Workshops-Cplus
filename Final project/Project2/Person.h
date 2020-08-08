@@ -2,15 +2,16 @@
 #include<iostream>
 #include<vector>
 #include "Account.h"
+#include"Payment.h"
 class Person
 {
 private:
 
    std::string name;
    long in;
-   Account* acc=nullptr;
-  // Account acc;
-   double creditCardAmount=3000.0;
+   std::vector<Account*>  acc;
+   std::vector<Payment*> p;
+ 
 public:
    Person();
    ~Person();
@@ -22,8 +23,16 @@ public:
    void setIn(int newIn);
    int getIn();
 
-   //std::vector<Account*> getAccount();
-   void setAccount(int x);
-  // double getAccount();
+   //void setAccount(int x);
+   std::vector<Account*> getAccount();
+   void resize(size_t x);
+   void resizeP(size_t x);
+
+   void setPayment(int y);
+   std::vector<Payment*> getPayment();
+
+   void createAccounts();
+   void createPayment();
+  
 
 };

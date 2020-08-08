@@ -4,26 +4,20 @@
 
 
 
-SavingAccount::SavingAccount() :Account(), rate(0.0), AT(1)
+SavingAccount::SavingAccount() :Account(), rate(0.0)
 {
 
 }
 
-SavingAccount::SavingAccount(double newBalance, double newRate, int at) : Account(newBalance, at), rate(newRate)
+SavingAccount::SavingAccount(double newBalance, double newRate ) : Account(newBalance), rate(newRate)
 {
-   if (at != 1)
-   {
-      AT = 1;
-   }
+ 
 }
 
 SavingAccount::~SavingAccount()
 {}
 
-int SavingAccount::getAT()
-{
-   return AT;
-}
+
 //set interest rate
 void SavingAccount::setRate(double newRate)
 {

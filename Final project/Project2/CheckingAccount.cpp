@@ -2,27 +2,21 @@
 #include "CheckingAccount.h"
 
 
-CheckingAccount::CheckingAccount() :Account(), fee(0), AT(2)
+CheckingAccount::CheckingAccount() :Account(), fee(0)
 {
 
 }
 
-CheckingAccount::CheckingAccount(double newBalance, double newFee, int at) : Account(newBalance, at), fee(newFee)
+CheckingAccount::CheckingAccount(double newBalance, double newFee) : Account(newBalance), fee(newFee)
 {
-   if (at != 2)
-   {
-      AT = 2;
-   }
+   
 }
 
 CheckingAccount::~CheckingAccount()
 {
 
 }
-int CheckingAccount::getAT()
-{
-   return AT;
-}
+
 //function set fee 
 void CheckingAccount::setFee(double newFee)
 {

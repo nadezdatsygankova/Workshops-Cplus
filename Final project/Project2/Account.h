@@ -3,10 +3,10 @@ class Account
 {
 public:
    Account();
-   Account(double newBalance, int at);
+   Account(double newBalance);
     ~Account();
    void setBalance(double newBalance);
-   virtual int getAT();
+  
    double getBalance() const;
    virtual void credit(double addmoney);
    virtual bool debit(double money);

@@ -7,13 +7,13 @@ class SavingAccount :public Account
 {
 private:
    double rate;
-   int AT;
+ 
 
 public:
    SavingAccount();
-   SavingAccount(double newBalance, double newRate, int at);
+   SavingAccount(double newBalance, double newRate);
    ~SavingAccount();
-   virtual int getAT();
+
    void setRate(double newRate);
    double getRate() const;
 

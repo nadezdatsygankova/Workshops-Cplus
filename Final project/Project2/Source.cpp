@@ -10,15 +10,7 @@
 #include <vector>
 #include<string>
 #include"Person.h"
-/*
-void menu()
-{
-   std::cout << " Bank account." << std::endl;
-   std::cout << "Select Account type: " << std::endl;
-   std::cout << "1. Saving Account" << std::endl;
-   std::cout << "2. Checking Account" << std::endl;
-   std::cout << "3. Exit" << std::endl;
-}*/
+
 
 int main()
 {
@@ -139,7 +131,7 @@ CreditCardPayment objects with different values and calls paymentDetails for eac
    B.2 Test: Create an instance of Person class and call its methods to validate the functionality.
    
    */
-   
+   /*
    Person New;
    std::cout << "Person information" << std::endl;
    std::cout << "Enter the Person's Name: " << std::endl;
@@ -159,201 +151,125 @@ CreditCardPayment objects with different values and calls paymentDetails for eac
    int option;
    do
    {
-      std::cout << "Select Account Type:\n1 - Saving Account\n2 - Checking Account" << std::endl;
-      
-      std::cin >> option;
-      if (option == 1)
+      for (int i = 0; i < p.size(); i++)
       {
-         for (int i = 0; i < p.size(); i++)
+         std::cout << "Select Account Type:\n1 - Saving Account\n2 - Checking Account" << std::endl;
+
+         std::cin >> option;
+         if (option == 1)
          {
+
             p[i] = new SavingAccount();
             std::cout << "Enter Initial Balance: " << std::endl;
             double balance;
             std::cin >> balance;
             p[i]->setBalance(balance);
             std::cout << "Account Title: " << New.getName() << std::endl;
-            std::cout << "Account " << i + 1 << ": Saving Account" << std::endl;
-            std::cout << "Balance" << p[i]->getBalance() << std::endl;
+            std::cout << "Account " << i+1  << ": Saving Account" << std::endl;
+            std::cout << "Balance " << p[i]->getBalance() << std::endl;
          }
-      }
-      else if (option == 2)
-      {
-         for (int i = 0; i < p.size(); i++)
+
+         else if (option == 2)
          {
-            p[i] = new CheckingAccount();
-            std::cout << "Enter  Balance: " << std::endl;
-            double balance;
-            std::cin >> balance;
-            p[i]->setBalance(balance);
-            std::cout << "Account Title: " << New.getName() << std::endl;
-            std::cout << "Account " << i + 1 << ": Credit Account" << std::endl;
-            std::cout << "Balance" << p[i]->getBalance() << std::endl;
+           
+               p[i] = new CheckingAccount();
+               std::cout << "Enter  Balance: " << std::endl;
+               double balance;
+               std::cin >> balance;
+               p[i]->setBalance(balance);
+               std::cout << "Account Title: " << New.getName() << std::endl;
+               std::cout << "Account " << i+1  << ": Credit Account" << std::endl;
+               std::cout << "Balance " << p[i]->getBalance() << std::endl;
+           
+
+
          }
-
-
-      }
-      else if (option == 0)
-      {
-         for (int i = 0; i < p.size(); i++)
+         else if (option == 0)
          {
-            p[i] = nullptr;
+          
+               p[i] = nullptr; //I AM NOT SURE
+            
+         }
+         else
+         {
+            std::cout << "Invalid Selection. Select the Account Type or press 0 to have null Account" << std::endl;
          }
       }
-      else
-      {
-         std::cout << "Invalid Selection. Select the Account Type or press 0 to have null Account" << std::endl;
-      }
 
-   } while ((option == 1) || (option == 2) || (option == 0);
+   } while ((option == 1) || (option == 2) || (option == 0));
    
-
-
-
-
+   */
 
    /*
-   std::cout << "Personal information:" << std::endl;
-   std::cout << "Name : " << New.getName() << std::endl;
-   std::cout << "Identification number: " << New.getIn() << std::endl;
-
-
-   Person Ob(New.getName(), New.getIn());
-   */
    
-   /*
-   std::cout << "How many accounts do you want to open?" << std::endl;
-   int number;
-   std::cin >> number;
+   C.2 Test: Create an instance of Account class and call its methods to validate the functionality.
+   
+   */
+/*
+     std::cout << "Select Account Type:\n1 - Saving Account\n2 - Checking Account" << std::endl;
 
-   //create a vector
-   std::vector<Account*> p(number);
+     */
 
+/*std::cout << "How many person?" << std::endl;
+int persons;
+std::cin >> persons;
+std::vector<Person*> pr(persons);
+
+for (int i = 0; i < pr.size; i++)
+{
+   std::cout << "Person information" << std::endl;
+   std::cout << "Enter the Person's Name: " << std::endl;
+   std::string name;
+   std::getline(std::cin, name);
+   pr[i]->setName(name);
+   std::cout << "Enter the Person's  identification number:  " << std::endl;
+   long iD;
+   std::cin >> iD;
+   pr[i]->setIn(iD);
+   pr[i]->createAccounts();
+   pr[i]->createPayment();
+}
+*/
+
+
+Person* arr = new Person[2];
+
+
+for (int i = 0; i < 2; i++)
+{
+   std::cout << "Person information" << std::endl;
+   std::cout << "Enter the Person's Name: " << std::endl;
+   std::cin.clear();
+   std::cin.ignore(100, '\n');
+   std::string name;
+   std::getline(std::cin, name);
+   arr[i].setName(name);
+   std::cout << "Enter the Person's  identification number:  " << std::endl;
+   long iD;
+   std::cin >> iD;
+   arr[i].setIn(iD);
+   arr[i].getAccount();
+   arr[i].createAccounts();
+  
 
    
+}
 
-   int option = 0;
-   do {
-      menu();
-      std::cin >> option;
-
-      if (option == 1)
-      {
-         for (int i = 0; i < p.size(); i++)
-         {
-            p[i] = new SavingAccount();
-            if (p[i]->getAT() == 1)
-            {
-               double addMoney;
-               double money;
-               p[i]->setBalance(1000.0);
-               p[i]->setRate(0.02);
-               std::cout << i + 1 << " account. Current balance is  " << p[i]->getBalance() << std::endl;
-               do {
-                  std::cout << "Enter amount money do you want to add?" << std::endl;
-                  std::cin >> addMoney;
-                  if (addMoney < 0)
-                  {
-                     std::cout << "Not negative number" << std::endl;
-                  }
-               } while (addMoney < 0);
-               p[i]->credit(addMoney);
-               std::cout << "Your balance after adding money is " << p[i]->getBalance() << std::endl;
-
-               do
-               {
-                  std::cout << "Enter amount money do you want to get?" << std::endl;
-                  std::cin >> money;
-                  if (money < 0)
-                  {
-                     std::cout << "Not negative number" << std::endl;
-                  }
-               } while (money < 0);
-
-               if (p[i]->debit(money))
-               {
-                  std::cout << "Your balance after withdraw money is " << p[i]->getBalance() << std::endl;
-               }
-               else
-               {
-                  std::cout << "Not enough money in the account" << std::endl;
-                  std::cout << "Your balance: " << p[i]->getBalance() << std::endl;
-               }
-
-               double inter = p[i]->calcInterest();
-               std::cout << " Interest amount :" << inter << std::endl;
-               p[i]->credit(inter);
-               std::cout << "Your balance with interest: " << p[i]->getBalance() << std::endl;
-            }
-            std::cout << "---------------------" << std::endl;
-         }
-
-      }
-      else if (option == 2)
-      {
-         for (int i = 0; i < p.size(); i++)
-         {
-            p[i] = new CheckingAccount();
-
-            p[i]->setBalance(1000.0);
-            std::cout << i + 1 << " account. Current balance is  " << p[i]->getBalance() << std::endl;
-            p[i]->setFee(2);
+/*
+for (int i = 0; i < 5; i++)
+{
+   std::cout << arr[i].getName() << std::endl;
+   std::cout << arr[i].getIn() << std::endl;
+}
+*/
 
 
-            double addMoney1, money1;
-            do {
-               std::cout << "Enter amount money do you want to add?" << std::endl;
-               std::cin >> addMoney1;
-               if (addMoney1 < 0)
-               {
-                  std::cout << "Not negative number" << std::endl;
-               }
-            } while (addMoney1 < 0);
-            std::cout << "Your balance after adding money is ";
-            p[i]->credit(addMoney1);
-            std::cout << p[i]->getBalance() << std::endl;
-
-            do {
-               std::cout << "Enter amount money do you want to get?" << std::endl;
-               std::cin >> money1;
-               if (money1 < 0)
-               {
-                  std::cout << "Not negative number" << std::endl;
-               }
-            } while (money1 < 0);
 
 
-            if (p[i]->debit(money1))
-            {
-               std::cout << "Your balance after withdraw money is ";
-               std::cout << p[i]->getBalance() << std::endl;
-
-            }
-            else
-            {
-               std::cout << "Not enough money in the account" << std::endl;
-               std::cout << "Your balance is" << p[i]->getBalance() << std::endl;
-            }
-
-            std::cout << "---------------------" << std::endl;
-         }
-      }
 
 
-      else if (option == 3)
-      {
-         std::cout << "Thank you for using the bank account" << std::endl;
-         break;
-      }
-
-      else
-      {
-         std::cout << "Invalid input" << std::endl;
-
-      }
-   } while (option == 3);
 
 
-   */
 
 
 

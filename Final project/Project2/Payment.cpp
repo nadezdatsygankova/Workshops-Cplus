@@ -48,3 +48,32 @@ void Payment::paymentDetails()
    std::cout << "The amount of the payment is " << payment << std::endl;
    std::cout << "Type of the payment is " << type << std::endl;
 }
+
+void Payment::setNameCard(std::string newNameCard)
+{
+
+}
+std::string Payment::getNameCard()
+{
+   return "";
+}
+
+void Payment::setExpiredDate(std::string newExpiredDate)
+{
+
+}
+
+std::string Payment::getExpiredDate()
+{
+   return "";
+}
+
+void Payment::setCardNumber(int newCardNumber)
+{
+
+}
+
+int Payment::getCardNumber()
+{
+   return 0;
+}
