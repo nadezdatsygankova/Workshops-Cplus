@@ -22,8 +22,13 @@ void menu()
 
 int main()
 {
-/*   Payment Start;
 
+/*A.4 Test: Create a main method that creates at least two CashPayment and two
+CreditCardPayment objects with different values and calls paymentDetails for each.
+*/
+
+
+/*
    CashPayment First(100.0, "bill");
    
    CashPayment Second(200.0, "shopping");
@@ -42,7 +47,13 @@ int main()
    Mark.paymentDetails();
    std::cout << "------------------" << std::endl;
    */
+
    /*
+   
+   B.2 Test: Create an instance of Person class and call its methods to validate the functionality.
+   
+   */
+   
    Person New;
    std::cout << "Person information" << std::endl;
    std::cout << "Enter your name " << std::endl;
@@ -60,7 +71,8 @@ int main()
 
 
    Person Ob(New.getName(), New.getIn());
-   */
+
+   
    /*
    std::cout << "How many accounts do you want to open?" << std::endl;
    int number;
@@ -233,6 +245,7 @@ delete[]arr;
 //SavingAccount SavAcc;
 //CheckingAccount CheckAcc;
 //Payment Pay(152.0,"shopping");
+/*
 CashPayment CasPay(152.0, "shopping");
 CreditCardPayment CredCar(152.2,"MK","Nad Pr","12/20",1524587);
 Person Aleksa("Aleksa", 152452);
@@ -244,7 +257,7 @@ std::cout << "Name: " << arr[0].getName() << "ID: " << arr[0].getIn() << std::en
 //std::cout << arr[0].getAccount();
 
 delete[] arr;
-
+*/
    return 0;
 
 }

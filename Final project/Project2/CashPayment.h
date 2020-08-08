@@ -8,6 +8,6 @@ public:
    CashPayment();
    CashPayment(float newPayment, std::string newType);
    ~CashPayment() ;
-   void paymentDetails();
+   void paymentDetails() override;
 
 };

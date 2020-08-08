@@ -9,7 +9,7 @@ public:
    ~CreditCardPayment() ;
    void setNameCard(std::string newNameCard);
    std::string getNameCard();
-   void paymentDetails();
+  
    void setExpiredDate(std::string newExpiredDate);
 
    std::string getExpiredDate();
@@ -17,7 +17,7 @@ public:
    void setCardNumber(int newCardNumber);
 
    int getCardNumber();
-
+   void paymentDetails() override;
 
 
 
