@@ -21,7 +21,7 @@ CashPayment::~CashPayment()
 
 void CashPayment::paymentDetails()
 {
-   std::cout << "The amount of the payment is " << getPayment() << std::endl;
-   std::cout << "Type of the payment is " << getType() << std::endl;
-   std::cout << "The payment is in cash/debit." << std::endl;
+   
+   std::cout << "You have made a CASH/Debit payment of " << getPayment() << " CAD in " << getType() << std::endl;
+  
 }

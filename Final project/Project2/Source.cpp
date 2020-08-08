@@ -10,7 +10,7 @@
 #include <vector>
 #include<string>
 #include"Person.h"
-
+/*
 void menu()
 {
    std::cout << " Bank account." << std::endl;
@@ -18,7 +18,7 @@ void menu()
    std::cout << "1. Saving Account" << std::endl;
    std::cout << "2. Checking Account" << std::endl;
    std::cout << "3. Exit" << std::endl;
-}
+}*/
 
 int main()
 {
@@ -26,27 +26,113 @@ int main()
 /*A.4 Test: Create a main method that creates at least two CashPayment and two
 CreditCardPayment objects with different values and calls paymentDetails for each.
 */
+   /*
+   std::cout << "Welcome to Payment System!" << std::endl;
+   std::cout << "Select the type of payment you want to make:" << std::endl;
+   std::cout << "1 - Cash / Debit Payment" << std::endl;
+   std::cout << "2 - Credit Card Payment" << std::endl;
+      
+   int option;
+   std::cin >> option;
+   CashPayment First;
+   CreditCardPayment Second;
+   if (option == 1)
+   {
 
+      std::cout << "Enter the Payment Amount: " << std::endl;
+      float payment;
+      std::cin >> payment;
+      First.setPaymet(payment);
+      std::cout << "Select the Payment Type:\n1 - Bills\n2 - Shopping\n3 - Grocery\n4 - Fuel\n5 - Medicine\n6 - Others" << std::endl;
+      int opt;
+      std::cin >> opt;
+      if (opt == 1)
+      {
+         First.setType("Bills");
+      }
+      else if (opt == 2)
+      {
+         First.setType("Shopping");
+      }
+      else if (opt == 3)
+      {
+         First.setType("Grocery");
+      }
+      else if (opt == 4)
+      {
+         First.setType("Fuel");
+      }
+      else if (opt == 5)
+      {
+         First.setType("Medicine");
+      }
+      else if (opt == 6)
+      {
+         First.setType("Others");
+      }
 
-/*
-   CashPayment First(100.0, "bill");
-   
-   CashPayment Second(200.0, "shopping");
+      First.paymentDetails();
+   }
 
+   if (option == 2)
+   {
+      //name of the card
+      std::cin.clear();
+      std::cin.ignore(100, '\n');
+      std::cout << "Enter the name on the card: " << std::endl;
+      std::string nameCard;
+      std::getline( std::cin, nameCard);
+      Second.setNameCard(nameCard);
+      
+      //expiration date
+      std::cout << "Enter expiration date  the card: " << std::endl;
+      std::string expirationDate;
+      std::getline(std::cin, expirationDate);
+      Second.setExpiredDate(expirationDate);
+      //credit card number
+      std::cout << "Enter credit card number: " << std::endl;
+      int cardNumber;
+      std::cin >> cardNumber;
+      Second.setCardNumber(cardNumber);
+      //payment amount
+      std::cout << "Enter the Payment Amount: " << std::endl;
+      float payment;
+      std::cin >> payment;
+      Second.setPaymet(payment);
+      //payment type
+      std::cout << "Select the Payment Type:\n1 - Bills\n2 - Shopping\n3 - Grocery\n4 - Fuel\n5 - Medicine\n6 - Others" << std::endl;
+      int opt;
+      std::cin >> opt;
+      if (opt == 1)
+      {
+         Second.setType("Bills");
+      }
+      else if (opt == 2)
+      {
+         Second.setType("Shopping");
+      }
+      else if (opt == 3)
+      {
+         Second.setType("Grocery");
+      }
+      else if (opt == 4)
+      {
+         Second.setType("Fuel");
+      }
+      else if (opt == 5)
+      {
+         Second.setType("Medicine");
+      }
+      else if (opt == 6)
+      {
+         Second.setType("Others");
+      }
 
-   CreditCardPayment John(150.0, "bill", "VISA", "08/20", 1524514);
-   CreditCardPayment Mark(10000.0, "shopping", "MK", "09/18", 524555);
-
-   First.paymentDetails();
-   std::cout << "------------------" << std::endl;
-   Second.paymentDetails();
-   std::cout << "------------------" << std::endl;
-
-   John.paymentDetails();
-   std::cout << "------------------" << std::endl;
-   Mark.paymentDetails();
-   std::cout << "------------------" << std::endl;
+      Second.paymentDetails();
+   }
    */
+
+
 
    /*
    
@@ -56,22 +142,83 @@ CreditCardPayment objects with different values and calls paymentDetails for eac
    
    Person New;
    std::cout << "Person information" << std::endl;
-   std::cout << "Enter your name " << std::endl;
+   std::cout << "Enter the Person's Name: " << std::endl;
    std::string name;
    std::getline(std::cin, name);
    New.setName(name);
-   std::cout << "Enter your the identification number  " << std::endl;
+   std::cout << "Enter the Person's  identification number:  " << std::endl;
    long iD;
    std::cin >>iD;
    New.setIn(iD);
+   std::cout << "Enter the number of Accounts Person hold:  " << std::endl;
+   int  numberAccount;
+   std::cin >> numberAccount;
 
+   //create a vector
+   std::vector<Account*> p(numberAccount);
+   int option;
+   do
+   {
+      std::cout << "Select Account Type:\n1 - Saving Account\n2 - Checking Account" << std::endl;
+      
+      std::cin >> option;
+      if (option == 1)
+      {
+         for (int i = 0; i < p.size(); i++)
+         {
+            p[i] = new SavingAccount();
+            std::cout << "Enter Initial Balance: " << std::endl;
+            double balance;
+            std::cin >> balance;
+            p[i]->setBalance(balance);
+            std::cout << "Account Title: " << New.getName() << std::endl;
+            std::cout << "Account " << i + 1 << ": Saving Account" << std::endl;
+            std::cout << "Balance" << p[i]->getBalance() << std::endl;
+         }
+      }
+      else if (option == 2)
+      {
+         for (int i = 0; i < p.size(); i++)
+         {
+            p[i] = new CheckingAccount();
+            std::cout << "Enter  Balance: " << std::endl;
+            double balance;
+            std::cin >> balance;
+            p[i]->setBalance(balance);
+            std::cout << "Account Title: " << New.getName() << std::endl;
+            std::cout << "Account " << i + 1 << ": Credit Account" << std::endl;
+            std::cout << "Balance" << p[i]->getBalance() << std::endl;
+         }
+
+
+      }
+      else if (option == 0)
+      {
+         for (int i = 0; i < p.size(); i++)
+         {
+            p[i] = nullptr;
+         }
+      }
+      else
+      {
+         std::cout << "Invalid Selection. Select the Account Type or press 0 to have null Account" << std::endl;
+      }
+
+   } while ((option == 1) || (option == 2) || (option == 0);
+   
+
+
+
+
+
+   /*
    std::cout << "Personal information:" << std::endl;
    std::cout << "Name : " << New.getName() << std::endl;
    std::cout << "Identification number: " << New.getIn() << std::endl;
 
 
    Person Ob(New.getName(), New.getIn());
-
+   */
    
    /*
    std::cout << "How many accounts do you want to open?" << std::endl;

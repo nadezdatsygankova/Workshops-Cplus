@@ -52,8 +52,8 @@ int CreditCardPayment::getCardNumber()
 
 void CreditCardPayment::paymentDetails()
 {
-   std::cout << "The amount of the payment is " << getPayment() << std::endl;
-   std::cout << "Type of the payment is " << getType() << std::endl;
+
+   std::cout << "You have made a Credit Card payment of " << getPayment() << " CAD in " << getType() << std::endl;
    std::cout << "The name of the card is " << nameCard << std::endl;
    std::cout << "The expiration date of the card is " << expiredDate << std::endl;
    std::cout << "The credit card number of the card is " << cardNumber << std::endl;
