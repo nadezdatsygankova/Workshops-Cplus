@@ -1,5 +1,2 @@
-﻿  Person.cpp
-E:\Наденька\SENECA\C++ OOP\Final project\Project2\Person.cpp(100,25): warning C4018: '<': signed/unsigned mismatch
-E:\Наденька\SENECA\C++ OOP\Final project\Project2\Person.cpp(160,22): warning C4018: '<': signed/unsigned mismatch
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(854,5): error MSB6006: "link.exe" exited with code 1168.
-LINK : fatal error LNK1168: cannot open E:\Наденька\SENECA\C++ OOP\Final project\Project2\Debug\Project2.exe for writing
+﻿  Source.cpp
+  Project2.vcxproj -> E:\Наденька\SENECA\C++ OOP\Final project\Project2\Debug\Project2.exe

@@ -271,3 +271,48 @@ void Person::createPayment()
 
    }
 }
+
+
+void  Person::display()
+{
+   std::string arr[7] = { "Person","Bills","Shopping","Grocery","Fuel","Medicine","Other" };
+   for (int i = 0; i < 7; i++)
+   {
+      std::cout << arr[i] << "           ";
+   }
+   std::cout << std::endl;
+
+   Person New;
+   CashPayment First;
+   CreditCardPayment Second;
+   New.setName("Albert John");
+   New.setIn(15222);
+   First.setPaymet(100.0);
+   First.setType("Bills");
+   
+   Second.setPaymet(120.0);
+   Second.setType("Shopping");
+
+   std::cout << New.getName();
+   std::string typeF = First.getType();
+   std::string typeS = Second.getType();
+   if ((typeF == "Bills" )&&(typeS =="Bills"))
+   {
+      std::cout << First.getPayment()+ Second.getPayment() << "CAD" << std::endl;
+   }
+   else if (typeF == "Bills") 
+   {
+      std::cout << First.getPayment() << std::endl;
+   }
+
+   else if (typeS == "Bills")
+   {
+      std::cout << Second.getPayment() << std::endl;
+   }
+   else
+
+   {
+      std::cout << "-";
+   }
+   
+}

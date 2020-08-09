@@ -10,6 +10,7 @@
 #include <vector>
 #include<string>
 #include"Person.h"
+#include<iomanip>
 
 
 int main()
@@ -232,9 +233,278 @@ for (int i = 0; i < pr.size; i++)
 */
 
 
-Person* arr = new Person[2];
+Person* arr = new Person[4];
+
+arr[0].setName("Albert John");
+arr[1].setName("Jane Blue");
+arr[2].setName("Ahmed Ali");
+arr[3].setName("Robert Brown");
+
+arr[0].setIn(1223);
+arr[1].setIn(5555);
+arr[2].setIn(8888);
+arr[3].setIn(9999);
 
 
+CashPayment* cp = new CashPayment[4];
+
+cp[0].setPaymet(150.0);
+cp[1].setPaymet(500.0);
+cp[2].setPaymet(800.0);
+cp[3].setPaymet(1000.0);
+
+cp[0].setType("Bills");
+cp[1].setType("Shopping");
+cp[2].setType("Grocery");
+cp[3].setType("Fuel");
+
+
+
+CreditCardPayment* ccp = new CreditCardPayment[4];
+
+ccp[0].setPaymet(150.0);
+ccp[1].setPaymet(500.0);
+ccp[2].setPaymet(800.0);
+ccp[3].setPaymet(1000.0);
+
+ccp[0].setType("Shopping");
+ccp[1].setType("Medicine");
+ccp[2].setType("Grocery");
+ccp[3].setType("Fuel");
+
+
+
+
+
+std::cout << "Select the Person for Payment Summary:" << std::endl;
+for (int i = 0; i < 4; i++)
+{
+   std::cout << i + 1 << arr[i].getName() << std::endl;
+}
+int sel;
+std::cin >> sel;
+int k=0;
+if (sel == 1)
+{
+   k = 0;
+}
+else if (sel == 2)
+{
+   k = 1;
+}
+
+else if (sel == 3)
+{
+   k = 2;
+}
+else if (sel == 4)
+{
+   k = 3;
+}
+
+
+/*
+std::string arr1[7] = { "Person","Bills","Shopping","Grocery","Fuel","Medicine","Other" };
+for (int i = 0; i < 7; i++)
+{
+   std::cout << arr1[i] << "           ";
+}
+std::cout << std::endl;
+
+if (sel == 1)
+{
+   std::cout << arr[0].getName();
+   std::cout << "(" << arr[0].getIn() << ")        ";
+
+   if (cp[0].getType() == "Bills")
+   {
+      std::cout << cp[0].getPayment() << "CAD";
+   }
+
+}
+*/
+
+
+
+
+
+std::string arr1[7] = { "Person  ","Bills ","Shopping ","Grocery ","Fuel ","Medicine","Other  " };
+
+
+const int ROWS = 4;
+const int COLS = 7;
+
+std::string arrw[ROWS][COLS];
+for (int i = 0; i < 7; i++)
+{
+   arrw[0][i] = arr1[i];
+   
+}
+
+
+
+
+
+arrw[1][0] = arr[k].getName() + " (CASH)";
+arrw[2][0] = "ID :"+std::to_string(arr[k].getIn())+" (CREDIT)";
+if (cp[k].getType() == "Bills")
+{
+   arrw[1][1]= std::to_string(cp[k].getPayment()) ;
+   
+}
+
+else
+{
+   arrw[1][1] = " -  ";
+}
+ if (ccp[k].getType() == "Bills")
+{
+   arrw[2][1] = std::to_string(ccp[k].getPayment());
+   
+}
+
+
+ else
+ {
+    arrw[2][1] = " -  ";
+ }
+
+ if (cp[k].getType() == "Shopping")
+{
+   arrw[1][2] = std::to_string(cp[k].getPayment());
+  
+}
+
+
+ else
+ {
+    arrw[1][2] = " -  ";
+ }
+ if (ccp[k].getType() == "Shopping")
+{
+   arrw[2][2] = std::to_string(ccp[k].getPayment());
+   
+}
+
+
+ else
+ {
+    arrw[2][2] = " -  ";
+ }
+
+ if (cp[k].getType() == "Grocery")
+{
+   arrw[1][3] = std::to_string(cp[k].getPayment());
+   
+}
+
+
+ else
+ {
+    arrw[1][3] = " -  ";
+ }
+ if (ccp[k].getType() == "Grocery")
+{
+   arrw[2][3] = std::to_string(ccp[k].getPayment());
+   
+}
+
+ else
+ {
+    arrw[2][3] = " -  ";
+ }
+ if (cp[k].getType() == "Fuel")
+{
+   arrw[1][4] = std::to_string(cp[k].getPayment());
+   
+}
+
+ else
+ {
+    arrw[1][4] = " -  ";
+ }
+ if (ccp[k].getType() == "Fuel")
+{
+   arrw[2][4] = std::to_string(ccp[k].getPayment());
+   
+}
+
+ else
+ {
+    arrw[2][4] = " -  ";
+ }
+
+ if (cp[k].getType() == "Medicine")
+{
+   arrw[1][5] = std::to_string(cp[k].getPayment());
+   
+}
+
+
+ else
+ {
+    arrw[1][5] = " -  ";
+ }
+ if (ccp[k].getType() == "Medicine")
+{
+   arrw[2][5] = std::to_string(ccp[k].getPayment());
+   
+}
+
+
+ else
+ {
+    arrw[2][5] = " -  ";
+ }
+
+
+ if (cp[k].getType() == "Other")
+{
+   arrw[1][6] = std::to_string(cp[k].getPayment());
+   
+}
+
+
+ else
+ {
+    arrw[1][6] = " -  ";
+ }
+ if (ccp[k].getType() == "Other")
+{
+   arrw[2][6] = std::to_string(ccp[k].getPayment());
+}
+
+
+ else
+ {
+    arrw[2][6] = " -  ";
+ }
+ 
+ arrw[3][0] = "Sum: ";
+
+ 
+ //arrw[3][1] = std::to_string();
+  
+
+
+
+for (int i = 0; i < ROWS; i++)
+{
+   for (int j = 0; j < COLS; j++)
+   {
+      std::cout <<std::setw(15)<< arrw[i][j] ;
+   }
+   std::cout << std::endl;
+}
+
+
+
+
+
+
+
+
+/*
 for (int i = 0; i < 2; i++)
 {
    std::cout << "Person information" << std::endl;
@@ -250,10 +520,42 @@ for (int i = 0; i < 2; i++)
    arr[i].setIn(iD);
    arr[i].getAccount();
    arr[i].createAccounts();
-  
+   arr[i].createPayment();
+ 
 
    
 }
+std::cout << "Select the Person for Payment Summary:" << std::endl;
+for (int i = 0; i < 2; i++)
+{
+   std::cout << i+1 << arr[i].getName() << std::endl;
+}
+int sel;
+std::cin >> sel;
+
+
+*/
+/*
+if (sel == 1)
+{
+   arr[0].display();
+   /*
+   int row = 1;
+   int cont = 6;
+   std::vector<std::vector<Person*>> dis(row, std::vector<Person*>(cont));
+
+   for (int i = 0; i < row; i++)
+   {
+      for (int j = 0; j < cont; j++)
+      {
+         dis[i][j]->getName();
+      }
+   }
+   */
+   /*
+   std::vector<std::vector<Person*>> dis = { {"Person","Bills","Shopping","Grocery","Fuel","Medicine","Other"},
+      {arr[0].getName(),0,0,0,0,} };
+      */
 
 /*
 for (int i = 0; i < 5; i++)

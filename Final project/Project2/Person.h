@@ -28,11 +28,11 @@ public:
    void resize(size_t x);
    void resizeP(size_t x);
 
-   void setPayment(int y);
+   //void setPayment(int y);
    std::vector<Payment*> getPayment();
 
    void createAccounts();
    void createPayment();
-  
+   void  display();
 
 };
