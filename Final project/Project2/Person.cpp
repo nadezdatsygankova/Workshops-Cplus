@@ -12,16 +12,16 @@ Person::Person()
    name = "";
    in = 0;
 
-
-   /*for (int i = 0; i < acc.size; i++)
+   /*
+   for (int i = 0; i < acc.size; i++)
    {
       acc[i] = nullptr;
    }
    for (int i = 0; i < p.size; i++)
    {
       p[i] = nullptr;
-   }*/
-   
+   }
+   */
    
 }
 
@@ -53,13 +53,7 @@ int Person::getIn()
 {
    return in;
 }
-/*
-void Person::setAccount( int x)
-{
-   acc=acc(x);
 
-}
-*/
 
 void Person::resize(size_t x)
 {
@@ -206,6 +200,8 @@ void Person::createPayment()
             }
 
             p[i]->paymentDetails();
+            display();
+            
          }
 
          if (option == 2)
@@ -268,13 +264,14 @@ void Person::createPayment()
 
 
       }
-
+      
    }
 }
 
 
 void  Person::display()
 {
+   
    std::string arr[7] = { "Person","Bills","Shopping","Grocery","Fuel","Medicine","Other" };
    for (int i = 0; i < 7; i++)
    {
@@ -282,8 +279,15 @@ void  Person::display()
    }
    std::cout << std::endl;
 
-   Person New;
-   CashPayment First;
+   
+
+   
+   
+ 
+   
+   
+   
+   /*CashPayment First;
    CreditCardPayment Second;
    New.setName("Albert John");
    New.setIn(15222);
@@ -314,5 +318,6 @@ void  Person::display()
    {
       std::cout << "-";
    }
+   */
    
 }
