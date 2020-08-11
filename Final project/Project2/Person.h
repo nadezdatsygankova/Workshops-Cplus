@@ -23,12 +23,12 @@ public:
    void setIn(int newIn);
    int getIn();
 
-   //void setAccount(int x);
+  
    std::vector<Account*> getAccount();
    void resize(size_t x);
    void resizeP(size_t x);
 
-   //void setPayment(int y);
+  
    std::vector<Payment*> getPayment();
 
    void createAccounts();

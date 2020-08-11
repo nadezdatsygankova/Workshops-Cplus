@@ -9,7 +9,7 @@ Payment::Payment()
 
 }
 
-Payment::Payment(float newPayment, std::string newType)
+Payment::Payment(float newPayment, std::string newType)//adding this part
 {
    if (newPayment >= 0.0)
    {

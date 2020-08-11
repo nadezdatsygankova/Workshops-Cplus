@@ -14,6 +14,12 @@ CreditCardPayment::CreditCardPayment() : Payment()
 CreditCardPayment::CreditCardPayment(float newPayment, std::string newType, std::string newNameCard, std::string newExpiredDate, int newCardNumber) : Payment(newPayment, newType), nameCard(newNameCard), expiredDate(newExpiredDate), cardNumber(newCardNumber)
 {}
 
+CreditCardPayment::CreditCardPayment(float newPayment, std::string newType):Payment(newPayment, newType)
+{
+   nameCard = "Antonio";
+   expiredDate = "12/2020";
+   cardNumber = 11111111;
+}
 CreditCardPayment::~CreditCardPayment()
 {
 

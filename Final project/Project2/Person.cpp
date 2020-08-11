@@ -12,16 +12,7 @@ Person::Person()
    name = "";
    in = 0;
 
-   /*
-   for (int i = 0; i < acc.size; i++)
-   {
-      acc[i] = nullptr;
-   }
-   for (int i = 0; i < p.size; i++)
-   {
-      p[i] = nullptr;
-   }
-   */
+  
    
 }
 
@@ -78,7 +69,6 @@ std::vector<Payment*> Person::getPayment()
 
 
 
-//std::vector <Account*> acc
 void Person::createAccounts()
 {
    std::cout << "Enter the number of Accounts Person hold:  " << std::endl;
@@ -87,8 +77,7 @@ void Person::createAccounts()
    resize(numberAccount);
    
 
-   //create a vector
- //  std::vector<Account*> acc(numberAccount);
+
    
    int option;
    
@@ -107,7 +96,7 @@ void Person::createAccounts()
             double balance;
             std::cin >> balance;
             acc[i]->setBalance(balance);
-          //  std::cout << "Account Title: " << getName() << std::endl;
+       
             std::cout << "Account " << i + 1 << ": Saving Account" << std::endl;
             std::cout << "Balance " << acc[i]->getBalance() << std::endl;
          }
@@ -120,7 +109,7 @@ void Person::createAccounts()
             double balance;
             std::cin >> balance;
             acc[i]->setBalance(balance);
-           // std::cout << "Account Title: " << New.getName() << std::endl;
+         
             std::cout << "Account " << i + 1 << ": Credit Account" << std::endl;
             std::cout << "Balance " << acc[i]->getBalance() << std::endl;
 
@@ -130,7 +119,7 @@ void Person::createAccounts()
          else if (option == 0)
          {
 
-            p[i] = nullptr; //I AM NOT SURE
+            p[i] = nullptr; 
 
          }
          else
@@ -283,41 +272,5 @@ void  Person::display()
 
    
    
- 
-   
-   
-   
-   /*CashPayment First;
-   CreditCardPayment Second;
-   New.setName("Albert John");
-   New.setIn(15222);
-   First.setPaymet(100.0);
-   First.setType("Bills");
-   
-   Second.setPaymet(120.0);
-   Second.setType("Shopping");
-
-   std::cout << New.getName();
-   std::string typeF = First.getType();
-   std::string typeS = Second.getType();
-   if ((typeF == "Bills" )&&(typeS =="Bills"))
-   {
-      std::cout << First.getPayment()+ Second.getPayment() << "CAD" << std::endl;
-   }
-   else if (typeF == "Bills") 
-   {
-      std::cout << First.getPayment() << std::endl;
-   }
-
-   else if (typeS == "Bills")
-   {
-      std::cout << Second.getPayment() << std::endl;
-   }
-   else
-
-   {
-      std::cout << "-";
-   }
-   */
    
 }
