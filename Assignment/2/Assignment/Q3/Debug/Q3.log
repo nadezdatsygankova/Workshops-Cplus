@@ -1,6 +1,0 @@
-﻿  CheckingAccount.cpp
-  Source.cpp
-  Generating Code...
-E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(44): warning C4715: 'CheckingAccount::debit': not all control paths return a value
-E:\Наденька\SENECA\C++ OOP\Assignment\Q3\CheckingAccount.cpp(33): warning C4715: 'CheckingAccount::credit': not all control paths return a value
-  Q3.vcxproj -> E:\Наденька\SENECA\C++ OOP\Assignment\Q3\Debug\Q3.exe
