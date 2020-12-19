@@ -1,2 +1,0 @@
-E:\Наденька\SENECA\C++ OOP\Workshops\CWorkshops\Workshop6\Project1\Debug\Project1.exe
-E:\Наденька\SENECA\C++ OOP\Workshops\CWorkshops\Workshop6\Project1\Debug\Project1.pdb
