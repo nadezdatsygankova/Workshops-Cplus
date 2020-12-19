@@ -1,9 +1,4 @@
-/*
-Nadezda Tsygankova
-Workshop1 .Week 2
 
-Practice Exercises1
-*/
 #include <iostream>
 #include <string>
 using namespace std;
