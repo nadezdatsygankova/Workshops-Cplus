@@ -1,7 +1,5 @@
 /*
 Nadezda Tsygankova
-Workshop1 .Week 2
-
 Practice Exercises2
 */
 
