@@ -1,7 +1,3 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q10
-  Due date:27/05/2020
-*/
 
 /*
 Write a program that reads in two integers and determines
