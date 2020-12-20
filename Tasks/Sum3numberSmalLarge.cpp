@@ -1,7 +1,3 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q4
-  Due date:27/05/2020
-*/
 
 /* Write a program that inputs three integers
 from the keyboard and prints the sum,
