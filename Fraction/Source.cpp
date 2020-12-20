@@ -1,7 +1,3 @@
-/*Author: Nadezda Tsygankova
-  Description: Midterm2/Q3
-  Due date:07/05/2020
-*/
 
 
 /*
