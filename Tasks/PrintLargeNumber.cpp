@@ -1,8 +1,3 @@
-/*/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q3
-  Due date:27/05/2020
-*/
-
 
 /*Write a program that asks the user to enter two integers,
 obtains the numbers from the user, then prints the larger number
