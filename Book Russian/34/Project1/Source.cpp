@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-// Возвращаем true, если x и y равны, в противном случае - возвращаем false 
+
 bool isEqual(int x, int y)
 {
-   return (x == y); // оператор == возвращает true, если x равно y, в противном случае - false 
+   return (x == y); 
 }
 
 int main()
