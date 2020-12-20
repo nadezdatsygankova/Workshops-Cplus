@@ -1,9 +1,3 @@
-/*
-Nadezda Tsygankova
-Practice Exercises2
-*/
-
-
 
 #pragma once
 #include <iostream>
