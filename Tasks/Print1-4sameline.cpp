@@ -1,7 +1,4 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q2
-  Due date:27/05/2020
-*/
+
 
 /*Write a program that prints the numbers 1 to 4 on the same line with each pair 
 of adjacent numbers separated by one space. Do this several ways:
