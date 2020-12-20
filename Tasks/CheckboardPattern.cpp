@@ -1,13 +1,7 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q11
-  Due date:27/05/2020
-*/
+
 /*
 Display the following checkerboard pattern with eight output statements, 
-
 then display the same pattern using as few statements as possible.
-
-
 
 */
 #include <iostream>
