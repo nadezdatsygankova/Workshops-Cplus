@@ -1,12 +1,7 @@
-/*Author:  Nadezda Tsygankova (ID 152949194),Diego Pena Sosa (ID 013876123),
-  Description: Final Project
-  Due date:11/08/2020
-*/
-
 
 /*
 You are required to develop Payment Management System (personal bookkeeping system) where individuals (more than one) can make multiple payments. The ability to pay for the transactions is related to banking module of the project.
-Your PMS consists of three modules, Person, Payment and Account (Bank Account). Account module should be integrated in the Person’s module. You should add an array of pointers of type Account to hold Account class’ objects in Person class.
+Your PMS consists of three modules, Person, Payment and Account (Bank Account). Account module should be integrated in the Personâ€™s module. You should add an array of pointers of type Account to hold Account classâ€™ objects in Person class.
 
 */
 
