@@ -1,7 +1,4 @@
-/*Author: Nadezda Tsygankova
-  Description: Midterm2/Q2
-  Due date:07/05/2020
-*/
+
 #pragma once
 
 #include <string>
