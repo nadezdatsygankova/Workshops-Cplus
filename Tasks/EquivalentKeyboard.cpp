@@ -1,7 +1,4 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q12
-  Due date:27/05/2020
-*/
+
 
 /*
 Write a program that prints the integer equivalent of a character typed 
