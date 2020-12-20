@@ -1,7 +1,4 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop06
-  Due date:07/21/2020
-*/
+
 
 /*
 (Package Inheritance Hierarchy) Package-delivery services
