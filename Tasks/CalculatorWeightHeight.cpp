@@ -1,12 +1,8 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q15
-  Due date:27/05/2020
-*/
 
 /*
-Create a BMI calculator application that reads the user’s weight
-in pounds and height in inches (or, if you prefer, the user’s weight 
-in kilograms and height in meters), then calculates and displays the user’s
+Create a BMI calculator application that reads the userâ€™s weight
+in pounds and height in inches (or, if you prefer, the userâ€™s weight 
+in kilograms and height in meters), then calculates and displays the userâ€™s
 body mass index. Also, the application should display the following information 
 from the Department of Health and Human Services/National Institutes 
 of Health so the user can evaluate his/her BMI:
@@ -40,10 +36,6 @@ int main() {
    else if (bminum >= 30) {
       std::cout << "Obese";
    }
-
-
-
-
 
 }
 
