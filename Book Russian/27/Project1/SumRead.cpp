@@ -1,6 +1,9 @@
 #include <iostream>
-#include "io.h"
 
+
+
+int readNumber();
+void writeAnswer(int number);
 
 int main()
 {
