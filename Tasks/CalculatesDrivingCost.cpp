@@ -1,7 +1,3 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q16
-  Due date:27/05/2020
-*/
 
 /*
 Research several car-pooling websites. Create an application that 
@@ -9,7 +5,7 @@ calculates your daily driving cost, so that you can estimate how much money
 could be saved by carpooling, which also has other advantages such as reducing
 carbon emissions and reducing traffic congestion. The application should input 
 the following information 
-and display the user’s cost per day of driving to work
+and display the userâ€™s cost per day of driving to work
 */
 
 
