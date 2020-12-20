@@ -1,7 +1,4 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q1
-  Due date:27/05/2020
-*/
+
 
 /*Q1  a program that asks the user
 to enter two numbers, obtains the two numbers from the user
