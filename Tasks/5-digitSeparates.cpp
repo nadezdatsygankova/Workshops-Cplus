@@ -1,9 +1,3 @@
-/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q13
-  Due date:27/05/2020
-*/
-
-
 
 /*
 
