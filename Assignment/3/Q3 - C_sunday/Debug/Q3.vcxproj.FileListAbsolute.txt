@@ -1,6 +1,0 @@
-E:\Наденька\SENECA\C++ OOP\Assignment\Q3\Debug\Q3.exe
-E:\Наденька\SENECA\C++ OOP\Assignment\Q3\Debug\Q3.pdb
-E:\Наденька\SENECA\C++ OOP\Assignment2\Q3\Debug\Q3.exe
-E:\Наденька\SENECA\C++ OOP\Assignment2\Q3\Debug\Q3.pdb
-E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday\Debug\Q3.exe
-E:\Наденька\SENECA\C++ OOP\Assignment2\Q3 - C_sunday\Debug\Q3.pdb
