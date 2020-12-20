@@ -1,7 +1,4 @@
-﻿/*Author: Nadezda Tsygankova
-  Description: Workshop02/Q5
-  Due date:27/05/2020
-*/
+
 /*
 Write a program that reads in the radius of a circle as an integer and
 prints the circle’s diameter, circumference and area.
