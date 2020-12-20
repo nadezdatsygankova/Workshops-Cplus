@@ -1,2 +1,0 @@
-E:\Наденька\SENECA\C++ OOP\Workshops\CWorkshops\Work2\Q3\x64\Debug\Q3.exe
-E:\Наденька\SENECA\C++ OOP\Workshops\CWorkshops\Work2\Q3\x64\Debug\Q3.pdb
